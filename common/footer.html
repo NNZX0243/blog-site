@@ -1,0 +1,163 @@
+<footer class="footer">
+	<div class="footer-inner">
+		<div class="copyright">
+			© 2024 – <span itemprop="copyrightYear">2025</span>
+			<span class="with-love"><i class="fa fa-heart"></i> </span
+			><span class="author" itemprop="copyrightHolder">~NNZX~</span>
+		</div>
+		<script
+			async
+			src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"
+		></script>
+		<div class="busuanzi-count">
+			<span class="post-meta-item" id="busuanzi_container_site_uv"
+				><span class="post-meta-item-icon"
+					><i class="fa fa-user"></i> </span
+				><span class="site-uv" title="总访客量"
+					><span id="busuanzi_value_site_uv"></span> </span></span
+			><span class="post-meta-item" id="busuanzi_container_site_pv"
+				><span class="post-meta-item-icon"
+					><i class="fa fa-eye"></i> </span
+				><span class="site-pv" title="总访问量"
+					><span id="busuanzi_value_site_pv"></span></span
+			></span>
+		</div>
+		<script>
+			if (
+				null == window.localStorage.getItem('fpson') ||
+				'1' == window.localStorage.getItem('fpson')
+			) {
+				var rAF =
+						window.requestAnimationFrame ||
+						window.webkitRequestAnimationFrame ||
+						function (e) {
+							window.setTimeout(e, 1e3 / 60)
+						},
+					frame = 0,
+					allFrameCount = 0,
+					lastTime = Date.now(),
+					lastFameTime = Date.now(),
+					loop = function () {
+						var e = Date.now(),
+							t = e - lastFameTime,
+							n = Math.round(1e3 / t)
+						if (
+							((lastFameTime = e),
+							allFrameCount++,
+							frame++,
+							e > 1e3 + lastTime)
+						) {
+							if (
+								(n = Math.round(
+									(1e3 * frame) / (e - lastTime)
+								)) <= 5
+							)
+								var o =
+									'<span style="color:#bd0000">卡成ppt🤢</span>'
+							else if (n <= 15)
+								o =
+									'<span style="color:red">电竞级帧率😖</span>'
+							else if (n <= 25)
+								o =
+									'<span style="color:orange">有点难受😨</span>'
+							else if (n < 35)
+								o =
+									'<span style="color:#9338e6">不太流畅🙄</span>'
+							else if (n <= 45)
+								o =
+									'<span style="color:#08b7e4">还不错哦😁</span>'
+							else
+								o =
+									'<span style="color:#39c5bb">十分流畅🤣</span>'
+							;(document.getElementById(
+								'fps'
+							).innerHTML = `FPS:${n} ${o}`),
+								(frame = 0),
+								(lastTime = e)
+						}
+						rAF(loop)
+					}
+				loop()
+			} else
+				document.getElementById('fps').style = 'display:none!important'
+			const observer = new MutationObserver(function (e) {
+				const t = document.querySelector('.aplayer-icon-lrc')
+				t &&
+					(setTimeout(function () {
+						t.click()
+					}, 1),
+					observer.disconnect())
+			})
+			observer.observe(document, { childList: !0, subtree: !0 })
+			function initializeRuntimeCounter() {
+				const e = new Date('2024/01/27 21:52:00')
+				function t() {
+					const t = new Date()
+					t.setTime(t.getTime() + 250)
+					const n = (t - e) / 1e3 / 60 / 60 / 24,
+						o = Math.floor(n),
+						r = (t - e) / 1e3 / 60 / 60 - 24 * o,
+						i = Math.floor(r).toString().padStart(2, '0'),
+						a = (t - e) / 1e3 / 60 - 1440 * o - 60 * i,
+						s = Math.floor(a).toString().padStart(2, '0'),
+						l = (t - e) / 1e3 - 86400 * o - 3600 * i - 60 * s,
+						c = Math.round(l).toString().padStart(2, '0')
+					;(document.getElementById('timeDate').innerHTML =
+						'距今已艰难运行了&nbsp' + o + '&nbsp天&nbsp'),
+						(document.getElementById('times').innerHTML =
+							i +
+							'&nbsp小时&nbsp' +
+							s +
+							'&nbsp分&nbsp' +
+							c +
+							'&nbsp秒')
+				}
+				t(), setInterval(t, 1e3)
+			}
+			document.addEventListener(
+				'DOMContentLoaded',
+				initializeRuntimeCounter
+			),
+				document.addEventListener(
+					'pjax:complete',
+					initializeRuntimeCounter
+				)
+			const copyrightAuthor = document
+				.querySelector('.copyright')
+				.querySelector('.author')
+			copyrightAuthor.addEventListener('click', (e) => {
+				window.open('https://ciallo.cc/')
+			}),
+				copyrightAuthor.addEventListener('mouseover', (e) => {
+					;(copyrightAuthor.style.textDecoration = 'underline'),
+						(copyrightAuthor.style.cursor = 'pointer')
+				}),
+				copyrightAuthor.addEventListener('mouseout', (e) => {
+					copyrightAuthor.style.textDecoration = 'none'
+				})
+		</script>
+		<span id="fps"></span
+		><link
+			href="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.css"
+			rel="stylesheet"
+		/><meting-js
+			autoplay=""
+			fixed="true"
+			id="8464409595"
+			list-folded="false"
+			list-max-height="36vh"
+			order="random"
+			server="netease"
+			type="playlist"
+			volume="0.3"
+		></meting-js>
+		<script
+			async=""
+			src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.js"
+		></script>
+		<script
+			async=""
+			src="https://registry.npmmirror.com/meting/latest/files/dist/Meting.min.js"
+		></script>
+	</div>
+</footer>

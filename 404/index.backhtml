@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>页面未找到 - 404错误</title>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+				font-family: 'Poppins', sans-serif;
+			}
+
+			body {
+				background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+				min-height: 100vh;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				color: white;
+				padding: 20px;
+				overflow-x: hidden;
+			}
+
+			.container {
+				max-width: 800px;
+				text-align: center;
+				position: relative;
+				z-index: 2;
+			}
+
+			.error-code {
+				font-size: 15rem;
+				font-weight: 700;
+				line-height: 1;
+				text-shadow: 6px 6px 10px rgba(0, 0, 0, 0.15);
+				margin-bottom: 20px;
+				position: relative;
+				animation: bounce 2s infinite alternate;
+				background: linear-gradient(to right, #ffffff, #e0e0e0);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+
+			.error-icon {
+				font-size: 8rem;
+				margin: 30px 0;
+				display: inline-block;
+				animation: float 6s ease-in-out infinite;
+			}
+
+			h1 {
+				font-size: 2.5rem;
+				margin-bottom: 20px;
+				font-weight: 600;
+			}
+
+			p {
+				font-size: 1.2rem;
+				line-height: 1.6;
+				max-width: 600px;
+				margin: 0 auto 30px;
+				font-weight: 300;
+				opacity: 0.9;
+			}
+
+			.actions {
+				display: flex;
+				gap: 20px;
+				justify-content: center;
+				margin-top: 30px;
+				flex-wrap: wrap;
+			}
+
+			.btn {
+				padding: 14px 32px;
+				border-radius: 50px;
+				text-decoration: none;
+				font-weight: 500;
+				font-size: 1rem;
+				transition: all 0.3s ease;
+				cursor: pointer;
+				border: none;
+				outline: none;
+				display: inline-block;
+			}
+
+			.btn-primary {
+				background: white;
+				color: #764ba2;
+				box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+			}
+
+			.btn-primary:hover {
+				transform: translateY(-3px);
+				box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+				background: #f8f9fa;
+			}
+
+			.btn-secondary {
+				background: transparent;
+				color: white;
+				border: 2px solid rgba(255, 255, 255, 0.5);
+			}
+
+			.btn-secondary:hover {
+				background: rgba(255, 255, 255, 0.1);
+				transform: translateY(-3px);
+			}
+
+			@keyframes bounce {
+				0%,
+				100% {
+					transform: translateY(0);
+				}
+				50% {
+					transform: translateY(-30px);
+				}
+			}
+
+			@keyframes float {
+				0% {
+					transform: translateY(0px) rotate(0deg);
+				}
+				50% {
+					transform: translateY(-20px) rotate(5deg);
+				}
+				100% {
+					transform: translateY(0px) rotate(0deg);
+				}
+			}
+
+			.bubble {
+				position: absolute;
+				border-radius: 50%;
+				background: rgba(255, 255, 255, 0.1);
+				box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+				animation: floatBubble 15s infinite linear;
+				z-index: 1;
+			}
+
+			@keyframes floatBubble {
+				0% {
+					transform: translateY(0) translateX(0) rotate(0);
+					opacity: 0.7;
+				}
+				50% {
+					opacity: 0.4;
+				}
+				100% {
+					transform: translateY(-800px) translateX(300px)
+						rotate(360deg);
+					opacity: 0;
+				}
+			}
+
+			.search-container {
+				background: rgba(255, 255, 255, 0.15);
+				padding: 15px;
+				border-radius: 50px;
+				margin: 30px auto;
+				max-width: 500px;
+				display: flex;
+				backdrop-filter: blur(10px);
+			}
+
+			.search-container input {
+				flex: 1;
+				border: none;
+				background: transparent;
+				padding: 12px 20px;
+				font-size: 1rem;
+				color: white;
+				outline: none;
+			}
+
+			.search-container input::placeholder {
+				color: rgba(255, 255, 255, 0.7);
+			}
+
+			.search-container button {
+				background: white;
+				border: none;
+				padding: 12px 25px;
+				border-radius: 50px;
+				color: #764ba2;
+				font-weight: 500;
+				cursor: pointer;
+				transition: all 0.3s ease;
+			}
+
+			.search-container button:hover {
+				transform: scale(1.05);
+			}
+
+			.footer {
+				position: fixed;
+				bottom: 0;
+				padding: 20px;
+				width: 100%;
+				text-align: center;
+				font-size: 0.9rem;
+				opacity: 0.7;
+			}
+
+			@media (max-width: 768px) {
+				.error-code {
+					font-size: 10rem;
+				}
+
+				.error-icon {
+					font-size: 6rem;
+				}
+
+				h1 {
+					font-size: 2rem;
+				}
+
+				p {
+					font-size: 1rem;
+				}
+
+				.actions {
+					flex-direction: column;
+					align-items: center;
+					gap: 15px;
+				}
+
+				.search-container {
+					flex-direction: column;
+					padding: 20px;
+					gap: 15px;
+				}
+
+				.search-container input {
+					width: 100%;
+					padding: 12px;
+					text-align: center;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="bubbles">
+			<!-- Background bubbles will be generated with JS -->
+		</div>
+
+		<div class="container">
+			<div class="error-code">404</div>
+			<div class="error-icon">👻</div>
+			<h1>糟糕！页面神秘消失了...</h1>
+			<p>
+				您访问的页面可能已被移除、暂时不可用或地址输入错误。请检查网址或尝试以下方法：
+			</p>
+
+			<div class="search-container">
+				<input type="text" placeholder="在网站内搜索..." />
+				<button>搜索</button>
+			</div>
+
+			<div class="actions">
+				<a href="#" class="btn btn-primary">返回首页</a>
+				<a href="#" class="btn btn-secondary">联系我们</a>
+				<a href="#" class="btn btn-secondary">查看其它内容</a>
+			</div>
+		</div>
+
+		<div class="footer">© 2023 您的网站名称 - 所有权利保留</div>
+
+		<script>
+			// Create background bubbles
+			function createBubbles() {
+				const container = document.body
+				const bubbleCount = 20
+
+				for (let i = 0; i < bubbleCount; i++) {
+					const bubble = document.createElement('div')
+					bubble.classList.add('bubble')
+
+					// Random size between 30px and 100px
+					const size = Math.random() * 70 + 30
+					bubble.style.width = `${size}px`
+					bubble.style.height = `${size}px`
+
+					// Random position
+					bubble.style.left = `${Math.random() * 100}%`
+					bubble.style.bottom = `-${size}px`
+
+					// Random animation delay
+					bubble.style.animationDelay = `${Math.random() * 5}s`
+
+					// Random animation duration
+					bubble.style.animationDuration = `${
+						Math.random() * 20 + 10
+					}s`
+
+					document.querySelector('.bubbles').appendChild(bubble)
+				}
+			}
+
+			// Initialize on page load
+			window.addEventListener('DOMContentLoaded', createBubbles)
+
+			// Search functionality (simplified)
+			document
+				.querySelector('.search-container button')
+				.addEventListener('click', function () {
+					const searchTerm = document.querySelector(
+						'.search-container input'
+					).value
+					if (searchTerm.trim() !== '') {
+						alert(
+							`您正在搜索: "${searchTerm}"\n（在实际网站中，这里会有真正的搜索功能）`
+						)
+					} else {
+						alert('请输入搜索关键词')
+					}
+				})
+		</script>
+	</body>
+</html>

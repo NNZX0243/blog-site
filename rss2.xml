@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>NNZX'S BLOG</title>
+    <link></link>
+    
+    <image>
+      <url></url>
+      <title>NNZX'S BLOG</title>
+      <link></link>
+    </image>
+    
+    <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
+    
+    <description>GO GO GO!</description>
+    <pubDate>Mon, 31 Mar 2025 21:00:00 GMT</pubDate>
+    <generator>~NNZX~</generator>
+    
+    <item>
+      <title>堆排序与拓扑排序</title>
+      <link>/p/1/</link>
+      <guid>/p/1/</guid>
+      <pubDate>Mon, 31 Mar 2025 21:00:00 GMT</pubDate>
+      
+      <description>本文介绍堆排序与拓扑排序算法</description>
+
+      <content:encoded>本文介绍堆排序与拓扑排序算法</content:encoded>
+      
+      
+      <category domain="/categories/Algorithm/">Algorithm</category>
+      
+    </item>
+
+
+  </channel>
+</rss>

@@ -1,0 +1,1655 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<script>
+			;(() => {
+				let sw = navigator.serviceWorker
+				let error = () =>
+					console.error(
+						'Service Worker 注册失败！可能是由于您的浏览器不支持该功能！'
+					)
+				if (
+					!sw
+						?.register('/sw.js')
+
+						?.catch(error)
+				)
+					error()
+			})()
+		</script>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta
+			name="theme-color"
+			content="#222"
+			media="(prefers-color-scheme: light)"
+		/>
+		<meta
+			name="theme-color"
+			content="#222"
+			media="(prefers-color-scheme: dark)"
+		/>
+		<meta name="generator" content="NNZX 1.0.0" />
+		<link
+			rel="preconnect"
+			href="https://registry.npmmirror.com"
+			crossorigin
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="/images/apple-touch-icon-next.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="/images/favicon-32x32-next.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="/images/favicon-16x16-next.png"
+		/>
+		<link rel="mask-icon" href="/images/logo.svg" color="#222" />
+		<meta
+			name="google-site-verification"
+			content="Makh0QpTE_cFQ_WZF3qShdl6cTicB36RA97vazztCDg"
+		/>
+		<meta name="msvalidate.01" content="62B427EB1357726A1F0EAD7D7C60105A" />
+		<meta name="baidu-site-verification" content="codeva-LJbs7UYunw" />
+		<link rel="stylesheet" href="/css/main.css" />
+		<link
+			rel="stylesheet"
+			href="https://registry.npmmirror.com/@fortawesome/fontawesome-free/6.7.2/files/css/all.min.css"
+			integrity="sha256-dABdfBfUoC8vJUBOwGVdm8L9qlMWaHTIfXt+7GnZCIo="
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://registry.npmmirror.com/@fancyapps/ui/5.0.36/files/dist/fancybox/fancybox.css"
+			integrity="sha256-zM8WXtG4eUn7dKKNMTuoWZub++VnSfaOpA/8PJfvTBo="
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://registry.npmmirror.com/pace-js/1.2.4/files/themes/blue/pace-theme-flash.css"
+		/>
+		<script
+			src="https://registry.npmmirror.com/pace-js/1.2.4/files/pace.min.js"
+			integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0="
+			crossorigin="anonymous"
+			defer
+		></script>
+		<script class="next-config" data-name="main" type="application/json">
+			{
+				"hostname": "gal.saop.cc",
+				"root": "/",
+				"images": "/images",
+				"scheme": "Gemini",
+				"darkmode": true,
+				"version": "8.23.0",
+				"exturl": true,
+				"sidebar": {
+					"position": "left",
+					"width_expanded": 320,
+					"width_dual_column": 240,
+					"display": "post",
+					"padding": 18,
+					"offset": 12
+				},
+				"hljswrap": true,
+				"copycode": { "enable": true, "style": "mac" },
+				"fold": { "enable": true, "height": 500 },
+				"bookmark": {
+					"enable": false,
+					"color": "#222",
+					"save": "manual"
+				},
+				"mediumzoom": false,
+				"lazyload": true,
+				"pangu": false,
+				"comments": {
+					"style": "tabs",
+					"active": null,
+					"storage": true,
+					"lazyload": true,
+					"nav": null
+				},
+				"stickytabs": false,
+				"motion": {
+					"enable": false,
+					"async": true,
+					"duration": 20,
+					"transition": {
+						"menu_item": "fadeInDown",
+						"post_block": "fadeIn",
+						"post_header": "fadeInDown",
+						"post_body": "fadeInDown",
+						"coll_header": "fadeInLeft",
+						"sidebar": "fadeInUp"
+					}
+				},
+				"i18n": {
+					"placeholder": "搜索...",
+					"empty": "没有找到任何搜索结果：${query}",
+					"hits_time": "找到 ${hits} 个搜索结果（用时 ${time} 毫秒）",
+					"hits": "找到 ${hits} 个搜索结果"
+				},
+				"path": "/search.json",
+				"localsearch": {
+					"enable": true,
+					"top_n_per_article": 3,
+					"unescape": true,
+					"preload": false
+				}
+			}
+		</script>
+		<script src="/js/config.js" defer></script>
+		<meta name="description" content="堆排序与拓扑排序" />
+		<meta property="og:type" content="article" />
+		<meta property="og:title" content="堆排序与拓扑排序" />
+		<meta property="og:url" content="" />
+		<meta property="og:site_name" content="~NNZX~'s BLOG" />
+		<meta property="og:description" content="堆排序与拓扑排序" />
+		<meta property="og:locale" content="zh_CN" />
+		<meta
+			property="article:published_time"
+			content="2025-06-09T13:57:09.000Z"
+		/>
+		<meta
+			property="article:modified_time"
+			content="2025-06-09T13:57:09.000Z"
+		/>
+		<meta property="article:author" content="~NNZX~" />
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:image" content="" />
+		<link rel="canonical" href="" />
+		<script class="next-config" data-name="page" type="application/json">
+			{
+				"sidebar": "",
+				"isHome": false,
+				"isPost": true,
+				"lang": "zh-CN",
+				"comments": true,
+				"permalink": "",
+				"path": "p/1/",
+				"title": "堆排序与拓扑排序"
+			}
+		</script>
+		<script
+			class="next-config"
+			data-name="calendar"
+			type="application/json"
+		>
+			""
+		</script>
+		<title>堆排序与拓扑排序</title>
+		<script
+			src="https://registry.npmmirror.com/animejs/3.2.1/files/lib/anime.min.js"
+			integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY="
+			crossorigin="anonymous"
+			defer
+		></script>
+		<script
+			src="https://registry.npmmirror.com/@next-theme/pjax/0.6.0/files/pjax.min.js"
+			integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao="
+			crossorigin="anonymous"
+			defer
+		></script>
+		<script
+			src="https://registry.npmmirror.com/@fancyapps/ui/5.0.36/files/dist/fancybox/fancybox.umd.js"
+			integrity="sha256-hiUEBwFEpLF6DlB8sGXlKo4kPZ46Ui4qGpd0vrVkOm4="
+			crossorigin="anonymous"
+			defer
+		></script>
+		<script
+			src="https://registry.npmmirror.com/lozad/1.16.0/files/dist/lozad.min.js"
+			integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc="
+			crossorigin="anonymous"
+			defer
+		></script>
+		<script src="/js/utils.js" defer></script>
+		<script src="/js/sidebar.js" defer></script>
+		<script src="/js/next-boot.js" defer></script>
+		<script src="/js/pjax.js" defer></script>
+		<script
+			src="https://registry.npmmirror.com/hexo-generator-searchdb/1.4.1/files/dist/search.js"
+			integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc="
+			crossorigin="anonymous"
+			defer
+		></script>
+		<script src="/js/third-party/search/local-search.js" defer></script>
+		<script src="/js/third-party/fancybox.js" defer></script>
+		<script src="/js/third-party/pace.js" defer></script>
+		<script
+			data-pjax
+			async
+			src="https://registry.npmmirror.com/js-asuna/latest/files/js/bsz.pure.mini.js"
+		></script>
+		<script
+			src="https://registry.npmmirror.com/quicklink/2.3.0/files/dist/quicklink.umd.js"
+			integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM="
+			crossorigin="anonymous"
+			defer
+		></script>
+		<script
+			class="next-config"
+			data-name="quicklink"
+			type="application/json"
+		>
+			{
+				"enable": true,
+				"home": true,
+				"archive": true,
+				"delay": true,
+				"timeout": 3000,
+				"priority": true,
+				"url": " "
+			}
+		</script>
+		<script src="/js/third-party/quicklink.js" defer></script>
+		<script async src="/lib/fireworks.js"></script>
+		<noscript><link rel="stylesheet" href="/css/noscript.css" /></noscript>
+		<script defer src="/sw-dom.js"></script>
+		<link
+			rel="alternate"
+			href="/atom.xml"
+			title="NNZX'BLOG"
+			type="application/atom+xml"
+		/>
+		<link
+			rel="alternate"
+			href="/rss2.xml"
+			title="NNZX'BLOG"
+			type="application/rss+xml"
+		/>
+	</head>
+	<body itemscope itemtype="http://schema.org/WebPage">
+		<div class="headband"></div>
+		<main class="main">
+			<div class="column">
+				<header
+					class="header"
+					itemscope
+					itemtype="http://schema.org/WPHeader"
+				>
+					<div class="site-brand-container">
+						<div class="site-nav-toggle">
+							<div
+								aria-label="切换导航栏"
+								class="toggle"
+								role="button"
+							>
+								<span class="toggle-line"></span>
+								<span class="toggle-line"></span>
+								<span class="toggle-line"></span>
+							</div>
+						</div>
+						<div class="site-meta">
+							<a class="brand" href="/" rel="start"
+								><i class="logo-line"></i>
+								<h1 class="site-title">~NNZX~</h1>
+								<i class="logo-line"></i
+							></a>
+							<p class="site-subtitle" itemprop="description">
+								Personal Blog
+							</p>
+						</div>
+						<div class="site-nav-right">
+							<div
+								aria-label="搜索"
+								class="toggle popup-trigger"
+								role="button"
+							>
+								<i class="fa fa-search fa-fw fa-lg"></i>
+							</div>
+						</div>
+					</div>
+					<nav class="site-nav">
+						<ul class="main-menu menu">
+							<li class="menu-item menu-item-home">
+								<a href="/" rel="section"
+									><i class="fa fa-home fa-fw"></i>首页</a
+								>
+							</li>
+							<li class="menu-item menu-item-archives">
+								<a href="/archives/" rel="section"
+									><i class="fa fa-archive fa-fw"></i
+									>归档<span class="badge">1</span></a
+								>
+							</li>
+							<li class="menu-item menu-item-categories">
+								<a href="/categories/" rel="section"
+									><i class="fa fa-th fa-fw"></i>分类<span
+										class="badge"
+										>13</span
+									></a
+								>
+							</li>
+							<li class="menu-item menu-item-留言">
+								<a href="/comments/" rel="section"
+									><i class="fas fa-comment-dots fa-fw"></i
+									>留言</a
+								>
+							</li>
+							<li class="menu-item menu-item-友链">
+								<a href="/links/" rel="section"
+									><i class="fas fa-link fa-fw"></i>友链</a
+								>
+							</li>
+							<li class="menu-item menu-item-云盘">
+								<a href="/404/" rel="section"
+									><i class="fas fa-cloud fa-fw"></i>云盘</a
+								>
+							</li>
+							<li class="menu-item menu-item-网盘">
+								<a href="/404/" rel="section"
+									><i class="fas fa-hard-drive fa-fw"></i
+									>网盘</a
+								>
+							</li>
+							<li class="menu-item menu-item-捐赠">
+								<a href="/donate/" rel="section"
+									><i
+										class="fas fa-hand-holding-dollar fa-fw"
+									></i
+									>捐赠</a
+								>
+							</li>
+							<li class="menu-item menu-item-广告">
+								<a href="/ad/" rel="section"
+									><i class="fa fa-rectangle-ad fa-fw"></i
+									>广告</a
+								>
+							</li>
+							<li class="menu-item menu-item-about">
+								<a href="/about/" rel="section"
+									><i class="fa fa-user fa-fw"></i>关于</a
+								>
+							</li>
+							<li class="menu-item menu-item-search">
+								<a class="popup-trigger" role="button"
+									><i class="fa fa-search fa-fw"></i>搜索</a
+								>
+							</li>
+						</ul>
+					</nav>
+					<div class="search-pop-overlay">
+						<div class="popup search-popup">
+							<div class="search-header">
+								<span class="search-icon"
+									><i class="fa fa-search"></i
+								></span>
+								<div class="search-input-container">
+									<input
+										autocapitalize="off"
+										autocomplete="off"
+										class="search-input"
+										maxlength="80"
+										placeholder="搜索..."
+										spellcheck="false"
+										type="search"
+									/>
+								</div>
+								<span class="popup-btn-close" role="button"
+									><i class="fa fa-times-circle"></i
+								></span>
+							</div>
+							<div class="search-result-container">
+								<div class="search-result-icon">
+									<i class="fa fa-spinner fa-pulse fa-5x"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</header>
+				<aside class="sidebar">
+					<div
+						class="sidebar-inner sidebar-nav-active sidebar-toc-active"
+					>
+						<ul class="sidebar-nav">
+							<li class="sidebar-nav-toc">文章目录</li>
+							<li class="sidebar-nav-overview">站点概览</li>
+						</ul>
+						<div class="sidebar-panel-container">
+							<div class="post-toc-wrap sidebar-panel">
+								<div class="post-toc animated">
+									<ol class="nav">
+										<li class="nav-item nav-level-2">
+											<a class="nav-link" href="#1"
+												><span class="nav-number"
+													>1</span
+												>
+												<span class="nav-text"
+													>堆排序</span
+												></a
+											>
+											<ol class="nav-child">
+												<li
+													class="nav-item nav-level-3"
+												>
+													<a
+														class="nav-link"
+														href="#1.1"
+														><span
+															class="nav-number"
+															>1.1</span
+														>
+														<span class="nav-text"
+															>堆的性质</span
+														></a
+													>
+												</li>
+												<li
+													class="nav-item nav-level-3"
+												>
+													<a
+														class="nav-link"
+														href="#1.2"
+														><span
+															class="nav-number"
+															>1.2</span
+														>
+														<span class="nav-text"
+															>堆排序</span
+														></a
+													>
+												</li>
+												<li
+													class="nav-item nav-level-3"
+												>
+													<a
+														class="nav-link"
+														href="#1.3"
+														><span
+															class="nav-number"
+															>1.3</span
+														>
+														<span class="nav-text"
+															>堆排序的代码实现</span
+														></a
+													>
+												</li>
+												<li
+													class="nav-item nav-level-3"
+												>
+													<a
+														class="nav-link"
+														href="#1.4"
+														><span
+															class="nav-number"
+															>1.4</span
+														>
+														<span class="nav-text"
+															>复杂度分析</span
+														></a
+													>
+												</li>
+											</ol>
+										</li>
+										<li class="nav-item nav-level-2">
+											<a class="nav-link" href="#2"
+												><span class="nav-number"
+													>2
+												</span>
+												<span class="nav-text"
+													>拓扑排序</span
+												></a
+											>
+											<ol class="nav-child">
+												<li
+													class="nav-item nav-level-3"
+												>
+													<a
+														class="nav-link"
+														href="#2.1"
+														><span
+															class="nav-number"
+															>2.1
+														</span>
+														<span class="nav-text"
+															>题意解释</span
+														></a
+													>
+												</li>
+												<li
+													class="nav-item nav-level-3"
+												>
+													<a
+														class="nav-link"
+														href="#2.2"
+														><span
+															class="nav-number"
+															>2.2
+														</span>
+														<span class="nav-text"
+															>生活例子</span
+														></a
+													>
+												</li>
+												<li
+													class="nav-item nav-level-3"
+												>
+													<a
+														class="nav-link"
+														href="#2.3"
+														><span
+															class="nav-number"
+															>2.3
+														</span>
+														<span class="nav-text"
+															>有向图描述</span
+														></a
+													>
+												</li>
+												<li
+													class="nav-item nav-level-3"
+												>
+													<a
+														class="nav-link"
+														href="#2.4"
+														><span
+															class="nav-number"
+															>2.4
+														</span>
+														<span class="nav-text"
+															>每次只能选你能上的课</span
+														></a
+													>
+												</li>
+												<li
+													class="nav-item nav-level-3"
+												>
+													<a
+														class="nav-link"
+														href="#2.5"
+														><span
+															class="nav-number"
+															>2.5
+														</span>
+														<span class="nav-text"
+															>这很像 BFS</span
+														></a
+													>
+												</li>
+												<li
+													class="nav-item nav-level-3"
+												>
+													<a
+														class="nav-link"
+														href="#2.6"
+														><span
+															class="nav-number"
+															>2.6
+														</span>
+														<span class="nav-text"
+															>BFS
+															前的准备工作</span
+														></a
+													>
+												</li>
+												<li
+													class="nav-item nav-level-3"
+												>
+													<a
+														class="nav-link"
+														href="#2.7"
+														><span
+															class="nav-number"
+															>2.7
+														</span>
+														<span class="nav-text"
+															>怎么判断能否修完所有课？</span
+														></a
+													>
+												</li>
+												<li
+													class="nav-item nav-level-3"
+												>
+													<a
+														class="nav-link"
+														href="#2.8"
+														><span
+															class="nav-number"
+															>2.8
+														</span>
+														<span class="nav-text"
+															>代码</span
+														></a
+													>
+												</li>
+											</ol>
+										</li>
+									</ol>
+								</div>
+							</div>
+							<div class="site-overview-wrap sidebar-panel">
+								<div
+									class="site-author animated"
+									itemprop="author"
+									itemscope=""
+									itemtype="http://schema.org/Person"
+								>
+									<img
+										alt="NNZX"
+										class="site-author-image"
+										itemprop="image"
+										src="/img/gaomu.png"
+									/>
+									<p class="site-author-name" itemprop="name">
+										~NNZX~
+									</p>
+									<div
+										class="site-description"
+										itemprop="description"
+									>
+										GO GO GO!
+									</div>
+								</div>
+								<div class="links-of-author animated">
+									<span class="links-of-author-item"
+										><span
+											class="exturl"
+											data-url="aHR0cHM6Ly9naXRodWIuY29tL05OWlgwMjQz"
+											title="GitHub → https://github.com/NNZX0243"
+											><i class="fab fa-github fa-fw"></i
+											>GitHub</span
+										> </span
+									><span class="links-of-author-item"
+										><span
+											class="exturl"
+											data-url="aHR0cHM6Ly9zcGFjZS5iaWxpYmlsaS5jb20vMzE2NzY2MTEx"
+											title="bilibili → https://space.bilibili.com/316766111"
+											><i
+												class="fab fa-bilibili fa-fw"
+											></i
+											>bilibili</span
+										> </span
+									><span class="links-of-author-item"
+										><span
+											class="exturl"
+											data-url=""
+											title="Telegram → https://t.me/"
+											><i
+												class="fab fa-telegram fa-fw"
+											></i
+											>Telegram</span
+										> </span
+									><span class="links-of-author-item"
+										><span
+											class="exturl"
+											data-url="bWFpbHRvOm1vaHVhMjAyNEBwcm90b24ubWU="
+											title="E-mail → mailto:mohua2024@proton.me"
+											><i class="fa fa-envelope fa-fw"></i
+											>E-mail</span
+										> </span
+									><span class="links-of-author-item"
+										><span
+											class="exturl"
+											data-url=" "
+											title="QQ 社群 → http://qm.qq.com/"
+											><i class="fab fa-qq fa-fw"></i>QQ
+											社群</span
+										> </span
+									><span class="links-of-author-item"
+										><span
+											class="exturl"
+											data-url=" "
+											title="腾讯频道 → https://pd.qq.com/"
+											><i
+												class="fas fa-comments fa-fw"
+											></i
+											>腾讯频道</span
+										> </span
+									><span class="links-of-author-item"
+										><span
+											class="exturl"
+											data-url=" "
+											title="Twitter → https://twitter.com/"
+											><i class="fab fa-twitter fa-fw"></i
+											>Twitter</span
+										> </span
+									><span class="links-of-author-item"
+										><a
+											href="/atom.xml"
+											rel="noopener me"
+											title="Feed → /atom.xml"
+											><i class="fa fa-rss fa-fw"></i
+											>Feed</a
+										></span
+									>
+								</div>
+							</div>
+						</div>
+						<div
+							class="back-to-top animated"
+							role="button"
+							aria-label="返回顶部"
+						>
+							<i class="fa fa-arrow-up"></i> <span>0%</span>
+						</div>
+					</div>
+					<div class="sidebar-inner sidebar-blogroll">
+						<div class="links-of-blogroll animated">
+							<div class="links-of-blogroll-title">
+								<i class="fa fa-globe fa-fw"></i> 链接
+							</div>
+							<ul class="links-of-blogroll-list">
+								<li class="links-of-blogroll-item">
+									<span
+										class="exturl"
+										data-url="aHR0cHM6Ly93aWtpcGVkaWEub3JnLw=="
+										title="https://wikipedia.org/"
+										>维基百科 - 自由的百科全书</span
+									>
+								</li>
+								<li class="links-of-blogroll-item">
+									<span
+										class="exturl"
+										data-url="aHR0cHM6Ly9tb2VnaXJsLm9yZy5jbi8="
+										title="https://moegirl.org.cn/"
+										>萌娘百科 - 万物皆可萌的百科全书</span
+									>
+								</li>
+								<li class="links-of-blogroll-item">
+									<span
+										class="exturl"
+										data-url="aHR0cHM6Ly93d3cucmFpbnl1bi5jb20vTlRNMU1EVTNfP3M9Vk5T"
+										title="https://www.rainyun.com/NTM1MDU3_?s=VNS"
+										>雨云 - 新一代云服务提供商</span
+									>
+								</li>
+								<li class="links-of-blogroll-item">
+									<span
+										class="exturl"
+										data-url="aHR0cHM6Ly9jb29rLmFpdXJzb2Z0LmNuLw=="
+										title="https://cook.aiursoft.cn/"
+										>How To Cook - 程序员做饭指南</span
+									>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="pjax">
+						<div class="sidebar-inner sidebar-post-related">
+							<div class="animated">
+								<div class="links-of-blogroll-title">
+									<i class="fa fa-signs-post fa-fw"></i>
+									相关文章
+								</div>
+								<ul class="popular-posts"></ul>
+							</div>
+						</div>
+					</div>
+				</aside>
+			</div>
+			<div class="main-inner post posts-expand">
+				<div class="post-block">
+					<article
+						itemscope
+						itemtype="http://schema.org/Article"
+						class="post-content"
+						lang="zh-CN"
+					>
+						<link
+							itemprop="mainEntityOfPage"
+							href="https://gal.saop.cc/p/1089/"
+						/><span
+							hidden
+							itemprop="author"
+							itemscope
+							itemtype="http://schema.org/Person"
+							><meta
+								itemprop="image"
+								content="/img/avatar.webp" /><meta
+								itemprop="name"
+								content="Asuna" /></span
+						><span
+							hidden
+							itemprop="publisher"
+							itemscope
+							itemtype="http://schema.org/Organization"
+							><meta itemprop="name" content="GGS" /><meta
+								itemprop="description"
+								content="LINK START!" /></span
+						><span
+							hidden
+							itemprop="post"
+							itemscope
+							itemtype="http://schema.org/CreativeWork"
+							><meta
+								itemprop="name"
+								content="堆排序与拓扑排序" /><meta
+								itemprop="description"
+								content=""
+						/></span>
+						<header class="post-header">
+							<h1 class="post-title" itemprop="name headline">
+								堆排序与拓扑排序<span
+									class="exturl post-edit-link"
+									data-url="aHR0cHM6Ly9naXRodWIuY29tL0FkaW5nQXBrZ2cvdm5zL2VkaXQvbWFpbi9zb3VyY2UvX3Bvc3RzL3RzdWtpbml5b3Jpc291LTJuZC5tZA=="
+									title="编辑"
+									><i class="fa fa-pen-nib"></i
+								></span>
+							</h1>
+							<div class="post-meta-container">
+								<div class="post-meta">
+									<span class="post-meta-item"
+										><span class="post-meta-item-icon"
+											><i
+												class="far fa-calendar"
+											></i> </span
+										><span class="post-meta-item-text"
+											>发表于</span
+										>
+										<time
+											title="创建时间：2025-06-09 21:57:09"
+											itemprop="dateCreated datePublished"
+											datetime="2025-06-09T21:57:09+08:00"
+											>2025-06-09</time
+										> </span
+									><span class="post-meta-item"
+										><span class="post-meta-item-icon"
+											><i
+												class="far fa-calendar-check"
+											></i> </span
+										><span class="post-meta-item-text"
+											>更新于</span
+										>
+										<time
+											datetime="2025-06-09T21:57:09+08:00"
+											itemprop="dateModified"
+											title="修改时间：2025-06-09 21:57:09"
+											>2025-06-09</time
+										>
+									</span>
+									<span class="post-meta-item"
+										><span class="post-meta-item-icon"
+											><i
+												class="far fa-folder"
+											></i> </span
+										><span class="post-meta-item-text"
+											>分类于</span
+										>
+										<span
+											itemprop="about"
+											itemscope
+											itemtype="http://schema.org/Thing"
+											><a
+												href="/categories/Algorithm/"
+												itemprop="url"
+												rel="index"
+												><span itemprop="name"
+													>Algorithm</span
+												></a
+											>
+										</span></span
+									>
+								</div>
+							</div>
+						</header>
+						<div class="post-body" itemprop="articleBody">
+							<h1 id="1">1、堆排序</h1>
+							<h2 id="1.1">1.1 堆的性质</h2>
+							<ul>
+								<li>
+									大顶堆：每个节点的值都大于或者等于它的左右子节点的值:
+									arr[i] &gt;= arr[2i + 1] &amp;&amp; arr[i]
+									&gt;= arr[2i + 2]
+								</li>
+								<li>
+									小顶堆：每个节点的值都小于或者等于它的左右子节点的值:
+									arr[i] &lt;= arr[2i + 1] &amp;&amp; arr[i]
+									&lt;= arr[2i + 2]
+								</li>
+							</ul>
+							<p>
+								<img
+									src="/p/1/image/v2-a0a4360e43447d443b4a384978bfbe66_720w-17244262636164.webp"
+									alt="img"
+								/>
+							</p>
+							<p>
+								把这种逻辑结构映射到数组: [9, 5, 8, 2, 3, 4, 7,
+								1] 和 [1, 3, 5, 4, 2, 8, 9, 7]
+							</p>
+							<h2 id="1.2">1.2 堆排序</h2>
+							<p>堆排序的基本思想是：</p>
+							<ol>
+								<li>
+									将带排序的序列构造成一个大顶堆，根据大顶堆的性质，当前堆的根节点（堆顶）就是序列中最大的元素；
+								</li>
+								<li>
+									将堆顶元素和最后一个元素交换，然后将剩下的节点重新构造成一个大顶堆；
+								</li>
+								<li>
+									重复步骤2，如此反复，从第一次构建大顶堆开始，每一次构建，我们都能获得一个序列的最大值，然后把它放到大顶堆的尾部。最后，就得到一个有序的序列了。
+								</li>
+							</ol>
+							<p><strong>举例演示过程</strong>：</p>
+							<p>
+								假设给定的无序序列arr是：【4, 5, 8, 2, 3, 9, 7,
+								1】
+							</p>
+							<ul>
+								<li>
+									<strong
+										>1 将无序序列构建成一个大顶堆。</strong
+									>
+								</li>
+							</ul>
+							<p>
+								首先我们将现在的无序序列看成一个堆结构，一个没有规则的二叉树，将序列里的值按照从上往下，从左到右依次填充到二叉树中
+							</p>
+							<p>
+								<img
+									src="/p/1/image/v2-fd0b4c35afe077067b3ccff7955b6e85_720w-17244262636166.webp"
+									alt="img"
+								/>
+							</p>
+							<p>
+								根据大顶堆的性质，每个节点的值都大于或者等于它的左右子节点的值。从下往上的方式不需要考虑父节点，因为当前节点调整完之后，当前节点必然比它的所有子节点都大。
+							</p>
+							<blockquote>
+								<p>
+									如何知道最后一个非叶子节点的位置，也就是索引值？
+								</p>
+							</blockquote>
+							<p>
+								对于一个完全二叉树，在填满的情况下（非叶子节点都有两个子节点），每一层的元素个数是上一层的二倍，根节点数量是1，所以最后一层的节点数量，一定是之前所有层节点总数+1，所以，我们能找到最后一层的第一个节点的索引，即节点总数/2（根节点索引为0），这也就是第一个叶子节点，所以第一个非叶子节点的索引就是第一个叶子结点的索引-1。那么对于填不满的二叉树呢？这个计算方式仍然适用，当我们从上往下，从左往右填充二叉树的过程中，<strong
+									>第一个叶子节点，一定是序列长度/2，所以第一个非叶子节点的索引就是arr.length
+									/ 2 -1</strong
+								>。
+							</p>
+							<p>
+								现在找到了最后一个非叶子节点，即元素值为2的节点，比较它的左右节点的值，是否比他大，如果大就换位置。这里因为1&lt;2，所以，不需要任何操作，继续比较下一个，即元素值为8的节点，它的左节点值为9比它本身大，所以需要交换：
+							</p>
+							<p>
+								<img
+									src="/p/1/image/v2-e96b3633090b54e2b0f091d2eb20477d_720w-17244262636168.webp"
+									alt="img"
+								/>
+							</p>
+							<p style="text-align: center">
+								交换后的序列：[4 5 9 2 3 8 7 1]
+							</p>
+							<p>
+								因为元素8没有子节点，所以继续比较下一个非叶子节点，元素值为5的节点，它的两个子节点值都比本身小，不需要调整；然后是元素值为4的节点，也就是根节点，因为9&gt;4，所以需要调整位置
+							</p>
+							<p>
+								<img
+									src="/p/1/image/v2-71fbde42ec6fb0464072a5d4d69c9205_720w.webp"
+									alt="img"
+								/>
+							</p>
+							<p style="text-align: center">
+								交换后的序列为：[9 5 4 2 3 8 7 1]
+							</p>
+							<p>
+								此时，原来元素值为9的节点值变成4了，而且它本身有两个子节点，所以，这时需要再次调整该节点
+							</p>
+							<p>
+								<img
+									src="/p/1/image/v2-d26aedc687e5796f3a9eff1ad41bc1ca_720w.webp"
+									alt="img"
+								/>
+							</p>
+							<p style="text-align: center">
+								交换后的序列为：[9 5 8 2 3 4 7 1]
+							</p>
+							<p>到此，大顶堆就构建完毕了。满足大顶堆的性质。</p>
+							<ul>
+								<li>
+									<strong
+										>2
+										排序序列，将堆顶的元素值和尾部的元素交换</strong
+									>
+								</li>
+							</ul>
+							<p>
+								<img
+									src="/p/1/image/v2-60e9b36daf4cb49f1a6c4fa76979971c_720w.webp"
+									alt="img"
+								/>
+							</p>
+							<p style="text-align: center">
+								交换后的序列为：[1 5 8 2 3 4 7 9]
+							</p>
+							<p>
+								然后将剩余的元素重新构建大顶堆，其实就是调整根节点以及其调整后影响的子节点，因为其他节点之前已经满足大顶堆性质。
+							</p>
+							<p>
+								<img
+									src="/p/1/image/v2-06e4bb04a1e527ccce50bf71513aa474_720w.webp"
+									alt="img"
+								/>
+							</p>
+							<p style="text-align: center">
+								交换后的序列为：[8 5 7 2 3 4 1 9]
+							</p>
+							<p>
+								然后，继续交换，堆顶节点元素值为8与当前尾部节点元素值为1的进行交换
+							</p>
+							<p>
+								<img
+									src="/p/1/image/v2-7a7f84e0c11201bdd11b83777b0aa4ac_720w.webp"
+									alt="img"
+								/>
+							</p>
+							<p style="text-align: center">
+								交换后的序列为：[1 5 7 2 3 4 8 9]
+							</p>
+							<p>重新构建大顶堆</p>
+							<p>
+								<img
+									src="/p/1/image/v2-0b80947b2235932ece90f6c746c2fc2a_720w.webp"
+									alt="img"
+								/>
+							</p>
+							<p style="text-align: center">
+								交换后的序列为：[7 5 4 2 3 1 8 9]
+							</p>
+							<p>重复上述过程，直至数组所有遍历一遍：</p>
+							<p>
+								<img
+									src="/p/1/image/v2-5de970b497a60e6e960f8a67ca4a996c_720w.webp"
+									alt="img"
+								/>
+							</p>
+							<p style="text-align: center">
+								交换后的序列为：[1 2 3 4 5 7 8 9]
+							</p>
+							<h2 id="1.3">1.3 堆排序的代码实现</h2>
+							<pre><code class="python language-python"># 堆排序
+import math
+import heapq
+
+
+class HeapSort(object):
+
+    def heapSort(self, arr):
+        if not arr or len(arr) == 0:
+            return
+        N = len(arr)
+        # 构建大顶堆，这里就是把排序序列，变成一个大顶堆结构数组
+        self.buildMaxHeap(arr, N)
+        # 交换堆顶和当前末尾的节点，重置大顶堆
+        for i in range(N - 1, -1, -1):
+            self.swap(arr, 0, i)
+            N -= 1
+            self.buildMaxHeap(arr, N)
+        return arr
+
+    def buildMaxHeap(self, arr, N):
+        # 从最后一个非叶节点开始向前遍历，调整节点性质，使之成为大顶堆
+        for i in range(math.floor(N / 2) - 1, -1, -1):
+            self.heapify(arr, i, N)
+
+    def heapify(self, arr, i, N):
+        # 先根据堆性质， 找出它左右节点的索引
+        left = 2 * i + 1
+        right = 2 * i + 2
+        largestIndex = i  # 默认当前节点（父节点）是最大值
+        if left &lt; N and arr[left] &gt; arr[largestIndex]:
+            largestIndex = left
+        if right &lt; N and arr[right] &gt; arr[largestIndex]:
+            largestIndex = right
+
+        if largestIndex != i:
+            # 如果最大值不是当前非叶子节点的值，那么就把当前节点和最大值的子节点值互换
+            self.swap(arr, i, largestIndex)
+            # 因为互换之后，子节点的值变了，如果该子节点也有自己的子节点，仍需要再次调整。
+            self.heapify(arr, largestIndex, N)
+
+    def swap(self, arr, i, j):
+        temp = arr[i]
+        arr[i] = arr[j]
+        arr[j] = temp
+
+    def python_func(self, arr):
+        # python 堆排序的函数库
+        heap = []
+        for num in arr:
+            heapq.heappush(heap, num)
+        heapsort = [heapq.heappop(heap) for _ in range(len(heap))]
+        print(heapsort)
+
+
+if __name__ == '__main__':
+    so = HeapSort()
+    arr = [4, 5, 8, 2, 3, 9, 7, 1, 1]
+    print(so.heapSort(arr))
+    print(so.python_func(arr))
+</code></pre>
+							<h2 id="1.4">1.4 复杂度分析</h2>
+							<p>
+								因为堆排序无关乎初始序列是否已经排序已经排序的状态，始终有两部分过程，构建初始的大顶堆的过程时间复杂度为O(n)，交换及重建大顶堆的过程中，需要交换n-1次，重建大顶堆的过程根据完全二叉树的性质，[log2(n-1),log2(n-2)…1]逐步递减，近似为nlogn。所以它<strong>最好和最坏的情况时间复杂度都是O(nlogn)</strong>，空间复杂度O(1)。
+							</p>
+							<h1 id="2">二、拓扑排序</h1>
+							<p>
+								你这个学期必须选修
+								<code>numCourses</code> 门课程，记为
+								<code>0</code> 到 <code>numCourses - 1</code> 。
+							</p>
+							<p>
+								在选修某些课程之前需要一些先修课程。
+								先修课程按数组
+								<code>prerequisites</code> 给出，其中
+								<code>prerequisites[i] = [ai, bi]</code>
+								，表示如果要学习课程 <code>ai</code> 则
+								<strong>必须</strong> 先学习课程
+								<code>bi</code> 。
+							</p>
+							<ul>
+								<li>
+									例如，先修课程对
+									<code>[0, 1]</code> 表示：想要学习课程
+									<code>0</code> ，你需要先完成课程
+									<code>1</code> 。
+								</li>
+							</ul>
+							<p>
+								请你判断是否可能完成所有课程的学习？如果可以，返回
+								<code>true</code> ；否则，返回
+								<code>false</code> 。
+							</p>
+							<p><strong>示例 1：</strong></p>
+							<pre><code>输入：numCourses = 2, prerequisites = [[1,0]]
+输出：true
+解释：总共有 2 门课程。学习课程 1 之前，你需要完成课程 0 。这是可能的。
+</code></pre>
+							<p><strong>示例 2：</strong></p>
+							<pre><code>输入：numCourses = 2, prerequisites = [[1,0],[0,1]]
+输出：false
+解释：总共有 2 门课程。学习课程 1 之前，你需要先完成课程 0 ；并且学习课程 0 之前，你还应先完成课程 1 。这是不可能的。
+</code></pre>
+							<h3 id="2.1">1、题意解释</h3>
+							<ul>
+								<li>
+									<p>一共有 n 门课要上，编号为 0 ~ n-1。</p>
+								</li>
+								<li>
+									<p>
+										先决条件 [1, 0]，意思是必须先上课
+										0，才能上课 1。
+									</p>
+								</li>
+								<li>
+									<p>
+										给你
+										n、和一个先决条件表，请你判断能否完成所有课程。
+									</p>
+								</li>
+							</ul>
+							<h3 id="2.2">2、再举个生活的例子</h3>
+							<ul>
+								<li>
+									<p>
+										先穿内裤再穿裤子，先穿打底再穿外套，先穿衣服再戴帽子，是约定俗成的。
+									</p>
+								</li>
+								<li>
+									<p>
+										内裤外穿、光着身子戴帽子等，都会有点奇怪。
+									</p>
+								</li>
+								<li>
+									<p>
+										我们遵循穿衣的一条条先后规则，用一串
+										顺序行为，把衣服一件件穿上。
+									</p>
+								</li>
+								<li>
+									<p>
+										我们遵循课程之间的先后规则，找到一种上课顺序，把所有课一节节上完。
+									</p>
+								</li>
+							</ul>
+							<h3 id="2.3">3、用有向图描述依赖关系</h3>
+							<ul>
+								<li>
+									<p>
+										示例：n = 6，先决条件表：[[3, 0], [3,
+										1], [4, 1], [4, 2], [5, 3], [5, 4]]
+									</p>
+								</li>
+								<li>
+									<p>
+										课 0, 1, 2
+										没有先修课，可以直接选。其余的课，都有两门先修课。
+									</p>
+								</li>
+								<li>
+									<p>
+										我们用有向图来展现这种依赖关系（做事情的先后关系）：
+									</p>
+								</li>
+							</ul>
+							<p>
+								<img
+									src="/p/1/image/de601db5bd50985014c7a6b89bca8aa231614b4ba423620dd2e31993c75a9137-微信截图_20200517052852.png"
+									alt="微信截图_20200517052852.png"
+								/>
+							</p>
+							<ul>
+								<li>
+									<p>
+										这种叫<strong>有向无环图</strong>，把一个<strong>有向无环图</strong>转成
+										线性的排序
+										就叫<strong>拓扑排序</strong>。
+									</p>
+								</li>
+								<li>
+									<p>
+										有向图有 <strong>入度</strong> 和
+										<strong>出度</strong> 的概念：
+									</p>
+								</li>
+								<li>
+									<p>
+										如果存在一条有向边 A --&gt;
+										B，则这条边给 A 增加了 1 个出度，给 B
+										增加了 1 个入度。
+									</p>
+								</li>
+								<li>
+									<p>
+										所以，顶点 0、1、2 的入度为 0。顶点
+										3、4、5 的入度为 2。
+									</p>
+								</li>
+							</ul>
+							<h3 id="2.4">4、每次只能选你能上的课</h3>
+							<ul>
+								<li>
+									<p>
+										每次只能选入度为 0
+										的课，因为它不依赖别的课，是当下你能上的课。
+									</p>
+								</li>
+								<li>
+									<p>
+										假设选了 0，课 3
+										的先修课少了一门，入度由 2 变 1。
+									</p>
+								</li>
+								<li>
+									<p>
+										接着选 1，导致课 3 的入度变 0，课 4
+										的入度由 2 变 1。
+									</p>
+								</li>
+								<li><p>接着选 2，导致课 4 的入度变 0。</p></li>
+								<li>
+									<p>
+										现在，课 3 和课 4 的入度为
+										0。继续选入度为 0 的课……直到选不到入度为
+										0 的课。
+									</p>
+								</li>
+							</ul>
+							<h3 id="2.5">5、这很像 BFS</h3>
+							<ul>
+								<li>
+									<p>
+										让入度为 0
+										的课入列，它们是能直接选的课。
+									</p>
+								</li>
+								<li>
+									<p>
+										然后逐个出列，出列代表着课被选，需要减小相关课的入度。
+									</p>
+								</li>
+								<li>
+									<p>
+										如果相关课的入度新变为
+										0，安排它入列、再出列……直到没有入度为 0
+										的课可入列。
+									</p>
+								</li>
+							</ul>
+							<h3 id="2.6">6、BFS 前的准备工作</h3>
+							<ul>
+								<li>
+									<p>
+										每门课的入度需要被记录，我们关心入度值的变化。
+									</p>
+								</li>
+								<li>
+									<p>
+										课程之间的依赖关系也要被记录，我们关心选当前课会减小哪些课的入度。
+									</p>
+								</li>
+								<li>
+									<p>
+										因此我们需要选择合适的数据结构，去存这些数据：
+									</p>
+								</li>
+								<li>
+									<p>
+										入度数组：课号 0 到 n - 1
+										作为索引，通过遍历先决条件表求出对应的初始入度。
+									</p>
+								</li>
+								<li>
+									<p>
+										邻接表：用哈希表记录依赖关系（也可以用二维矩阵，但有点大）
+									</p>
+									<ul>
+										<li>key：课号</li>
+										<li>
+											value：依赖这门课的后续课（数组）
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h3 id="2.7">7、怎么判断能否修完所有课？</h3>
+							<ul>
+								<li>
+									<p>
+										BFS 结束时，如果仍有课的入度不为
+										0，无法被选，完成不了所有课。否则，能找到一种顺序把所有课上完。
+									</p>
+								</li>
+								<li>
+									<p>
+										或者：用一个变量 count
+										记录入列的顶点个数，最后判断 count
+										是否等于总课程数。
+									</p>
+								</li>
+							</ul>
+							<h3 id="2.8">8、代码</h3>
+							<pre><code class="js language-js">const canFinish = (numCourses, prerequisites) =&gt; {
+const inDegree = new Array(numCourses).fill(0); // 入度数组
+const map = {};                                 // 邻接表
+for (let i = 0; i &lt; prerequisites.length; i++) {
+    inDegree[prerequisites[i][0]]++;              // 求课的初始入度值
+    if (map[prerequisites[i][1]]) {               // 当前课已经存在于邻接表
+    map[prerequisites[i][1]].push(prerequisites[i][0]); // 添加依赖它的后续课
+    } else {                                      // 当前课不存在于邻接表
+    map[prerequisites[i][1]] = [prerequisites[i][0]];
+    }
+}
+const queue = [];
+for (let i = 0; i &lt; inDegree.length; i++) { // 所有入度为0的课入列
+    if (inDegree[i] == 0) queue.push(i);
+}
+let count = 0;
+while (queue.length) {
+    const selected = queue.shift();           // 当前选的课，出列
+    count++;                                  // 选课数+1
+    const toEnQueue = map[selected];          // 获取这门课对应的后续课
+    if (toEnQueue &amp;&amp; toEnQueue.length) {      // 确实有后续课
+    for (let i = 0; i &lt; toEnQueue.length; i++) {
+        inDegree[toEnQueue[i]]--;             // 依赖它的后续课的入度-1
+        if (inDegree[toEnQueue[i]] == 0) {    // 如果因此减为0，入列
+        queue.push(toEnQueue[i]);
+        }
+    }
+    }
+}
+return count == numCourses; // 选了的课等于总课数，true，否则false
+};
+</code></pre>
+						</div>
+						<footer class="post-footer">
+							<div class="reward-container">
+								<div>请我一杯咖啡吧！</div>
+								<button>赞赏</button>
+								<div class="post-reward">
+									<p style="text-align: center">
+										站长现在一杯咖啡还是买得起的，谢谢你的好意！
+									</p>
+									<!-- <div>
+										<img
+											src="/img/wechatpay.webp"
+											alt="Asuna 微信"
+										/>
+										<span>微信</span>
+									</div>
+									<div>
+										<img
+											src="/img/alipay.webp"
+											alt="Asuna 支付宝"
+										/>
+										<span>支付宝</span>
+									</div> -->
+								</div>
+							</div>
+							<div class="post-copyright">
+								<ul>
+									<li class="post-copyright-author">
+										<strong>本文作者： </strong>~NNZX~
+									</li>
+									<li class="post-copyright-source">
+										<strong>文章来源： </strong>~NNZX~
+										从知乎上摘录下来的，链接下次遇到再补了。
+									</li>
+									<li class="post-copyright-link">
+										<strong>本文链接：</strong>
+										<a href="/p/1/" title="堆排序与拓扑排序"
+											>/p/1/</a
+										>
+									</li>
+									<li class="post-copyright-license">
+										<strong>版权声明： </strong
+										>本博客所有文章除特别声明外，均可随便转载，因为文章也不知道站长从哪薅来的！当然站长记得的话也会标明出处。
+									</li>
+								</ul>
+							</div>
+							<div class="post-nav">
+								<div class="post-nav-item">
+									<a
+										href="/p/1/"
+										rel="prev"
+										title="已经到头咯"
+										><i class="fa fa-angle-left"></i>
+										已经到头咯</a
+									>
+								</div>
+								<div class="post-nav-item">
+									<a
+										href="/p/2/"
+										rel="next"
+										title="已经到底咯"
+										>已经到底咯
+										<i class="fa fa-angle-right"></i
+									></a>
+								</div>
+							</div>
+						</footer>
+					</article>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer-inner">
+				<div class="copyright">
+					© 2024 – <span itemprop="copyrightYear">2025</span>
+					<span class="with-love"><i class="fa fa-heart"></i> </span
+					><span class="author" itemprop="copyrightHolder"
+						>~NNZX~</span
+					>
+				</div>
+				<script
+					async
+					src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"
+				></script>
+				<div class="busuanzi-count">
+					<span class="post-meta-item" id="busuanzi_container_site_uv"
+						><span class="post-meta-item-icon"
+							><i class="fa fa-user"></i> </span
+						><span class="site-uv" title="总访客量"
+							><span
+								id="busuanzi_value_site_uv"
+							></span> </span></span
+					><span
+						class="post-meta-item"
+						id="busuanzi_container_site_pv"
+						><span class="post-meta-item-icon"
+							><i class="fa fa-eye"></i> </span
+						><span class="site-pv" title="总访问量"
+							><span id="busuanzi_value_site_pv"></span></span
+					></span>
+				</div>
+				<script>
+					if (
+						null == window.localStorage.getItem('fpson') ||
+						'1' == window.localStorage.getItem('fpson')
+					) {
+						var rAF =
+								window.requestAnimationFrame ||
+								window.webkitRequestAnimationFrame ||
+								function (e) {
+									window.setTimeout(e, 1e3 / 60)
+								},
+							frame = 0,
+							allFrameCount = 0,
+							lastTime = Date.now(),
+							lastFameTime = Date.now(),
+							loop = function () {
+								var e = Date.now(),
+									t = e - lastFameTime,
+									n = Math.round(1e3 / t)
+								if (
+									((lastFameTime = e),
+									allFrameCount++,
+									frame++,
+									e > 1e3 + lastTime)
+								) {
+									if (
+										(n = Math.round(
+											(1e3 * frame) / (e - lastTime)
+										)) <= 5
+									)
+										var o =
+											'<span style="color:#bd0000">卡成ppt🤢</span>'
+									else if (n <= 15)
+										o =
+											'<span style="color:red">电竞级帧率😖</span>'
+									else if (n <= 25)
+										o =
+											'<span style="color:orange">有点难受😨</span>'
+									else if (n < 35)
+										o =
+											'<span style="color:#9338e6">不太流畅🙄</span>'
+									else if (n <= 45)
+										o =
+											'<span style="color:#08b7e4">还不错哦😁</span>'
+									else
+										o =
+											'<span style="color:#39c5bb">十分流畅🤣</span>'
+									;(document.getElementById(
+										'fps'
+									).innerHTML = `FPS:${n} ${o}`),
+										(frame = 0),
+										(lastTime = e)
+								}
+								rAF(loop)
+							}
+						loop()
+					} else
+						document.getElementById('fps').style =
+							'display:none!important'
+					const observer = new MutationObserver(function (e) {
+						const t = document.querySelector('.aplayer-icon-lrc')
+						t &&
+							(setTimeout(function () {
+								t.click()
+							}, 1),
+							observer.disconnect())
+					})
+					observer.observe(document, { childList: !0, subtree: !0 })
+					function initializeRuntimeCounter() {
+						const e = new Date('2024/01/27 21:52:00')
+						function t() {
+							const t = new Date()
+							t.setTime(t.getTime() + 250)
+							const n = (t - e) / 1e3 / 60 / 60 / 24,
+								o = Math.floor(n),
+								r = (t - e) / 1e3 / 60 / 60 - 24 * o,
+								i = Math.floor(r).toString().padStart(2, '0'),
+								a = (t - e) / 1e3 / 60 - 1440 * o - 60 * i,
+								s = Math.floor(a).toString().padStart(2, '0'),
+								l =
+									(t - e) / 1e3 -
+									86400 * o -
+									3600 * i -
+									60 * s,
+								c = Math.round(l).toString().padStart(2, '0')
+							;(document.getElementById('timeDate').innerHTML =
+								'距今已艰难运行了&nbsp' + o + '&nbsp天&nbsp'),
+								(document.getElementById('times').innerHTML =
+									i +
+									'&nbsp小时&nbsp' +
+									s +
+									'&nbsp分&nbsp' +
+									c +
+									'&nbsp秒')
+						}
+						t(), setInterval(t, 1e3)
+					}
+					document.addEventListener(
+						'DOMContentLoaded',
+						initializeRuntimeCounter
+					),
+						document.addEventListener(
+							'pjax:complete',
+							initializeRuntimeCounter
+						)
+					const copyrightAuthor = document
+						.querySelector('.copyright')
+						.querySelector('.author')
+					copyrightAuthor.addEventListener('click', (e) => {
+						window.open('https://ciallo.cc/')
+					}),
+						copyrightAuthor.addEventListener('mouseover', (e) => {
+							;(copyrightAuthor.style.textDecoration =
+								'underline'),
+								(copyrightAuthor.style.cursor = 'pointer')
+						}),
+						copyrightAuthor.addEventListener('mouseout', (e) => {
+							copyrightAuthor.style.textDecoration = 'none'
+						})
+				</script>
+				<span id="fps"></span
+				><link
+					href="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.css"
+					rel="stylesheet"
+				/><meting-js
+					autoplay=""
+					fixed="true"
+					id="8464409595"
+					list-folded="false"
+					list-max-height="36vh"
+					order="random"
+					server="netease"
+					type="playlist"
+					volume="0.3"
+				></meting-js>
+				<script
+					async=""
+					src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.js"
+				></script>
+				<script
+					async=""
+					src="https://registry.npmmirror.com/meting/latest/files/dist/Meting.min.js"
+				></script>
+			</div>
+		</footer>
+		<div class="toggle sidebar-toggle" role="button">
+			<span class="toggle-line"></span> <span class="toggle-line"></span>
+			<span class="toggle-line"></span>
+		</div>
+		<div class="sidebar-dimmer"></div>
+		<noscript
+			><div class="noscript-warning">
+				Theme NexT works best with JavaScript enabled
+			</div></noscript
+		>
+	</body>
+</html>

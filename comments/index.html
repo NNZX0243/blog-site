@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+	<head>
+		<script>
+			;(() => {
+				let sw = navigator.serviceWorker
+				let error = () =>
+					console.error(
+						'Service Worker 注册失败！可能是由于您的浏览器不支持该功能！'
+					)
+				if (
+					!sw
+						?.register('/sw.js')
+
+						?.catch(error)
+				)
+					error()
+			})()
+		</script>
+		<meta charset="utf-8" />
+		<meta content="width=device-width" name="viewport" />
+		<meta
+			content="#222"
+			media="(prefers-color-scheme: light)"
+			name="theme-color"
+		/>
+		<meta
+			content="#222"
+			media="(prefers-color-scheme: dark)"
+			name="theme-color"
+		/>
+		<meta content="NNZX 1.0.0" name="generator" />
+		<link
+			crossorigin=""
+			href="https://registry.npmmirror.com"
+			rel="preconnect"
+		/>
+		<link
+			href="/images/apple-touch-icon-next.png"
+			rel="apple-touch-icon"
+			sizes="180x180"
+		/>
+		<link
+			href="/images/favicon-32x32-next.png"
+			rel="icon"
+			sizes="32x32"
+			type="image/png"
+		/>
+		<link
+			href="/images/favicon-16x16-next.png"
+			rel="icon"
+			sizes="16x16"
+			type="image/png"
+		/>
+		<link color="#222" href="/images/logo.svg" rel="mask-icon" />
+		<!--谷歌 网站所有权认证暂时不管-->
+		<meta content=" " name="google-site-verification" />
+		<!-- Bing 搜索引擎所有权认证暂时不管 -->
+		<meta content=" " name="msvalidate.01" />
+		<!-- 百度搜索引擎所有权认证暂时不管 -->
+		<meta content="codeva-LJbs7UYunw" name="baidu-site-verification" />
+		<link href="/css/main.css" rel="stylesheet" />
+		<link
+			crossorigin="anonymous"
+			href="https://registry.npmmirror.com/@fortawesome/fontawesome-free/6.7.2/files/css/all.min.css"
+			integrity="sha256-dABdfBfUoC8vJUBOwGVdm8L9qlMWaHTIfXt+7GnZCIo="
+			rel="stylesheet"
+		/>
+		<link
+			crossorigin="anonymous"
+			href="https://registry.npmmirror.com/@fancyapps/ui/5.0.36/files/dist/fancybox/fancybox.css"
+			integrity="sha256-zM8WXtG4eUn7dKKNMTuoWZub++VnSfaOpA/8PJfvTBo="
+			rel="stylesheet"
+		/>
+		<link
+			href="https://registry.npmmirror.com/pace-js/1.2.4/files/themes/blue/pace-theme-flash.css"
+			rel="stylesheet"
+		/>
+		<script
+			crossorigin="anonymous"
+			defer=""
+			integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0="
+			src="https://registry.npmmirror.com/pace-js/1.2.4/files/pace.min.js"
+		></script>
+		<!--  hostname 为网址 暂时留空-->
+		<script class="next-config" data-name="main" type="application/json">
+			{
+				"hostname": " ",
+				"root": "/",
+				"images": "/images",
+				"scheme": "Gemini",
+				"darkmode": true,
+				"version": "8.23.0",
+				"exturl": true,
+				"sidebar": {
+					"position": "left",
+					"width_expanded": 320,
+					"width_dual_column": 240,
+					"display": "post",
+					"padding": 18,
+					"offset": 12
+				},
+				"hljswrap": true,
+				"copycode": { "enable": true, "style": "mac" },
+				"fold": { "enable": true, "height": 500 },
+				"bookmark": {
+					"enable": false,
+					"color": "#222",
+					"save": "manual"
+				},
+				"mediumzoom": false,
+				"lazyload": true,
+				"pangu": false,
+				"comments": {
+					"style": "tabs",
+					"active": null,
+					"storage": true,
+					"lazyload": true,
+					"nav": null
+				},
+				"stickytabs": false,
+				"motion": {
+					"enable": false,
+					"async": true,
+					"duration": 20,
+					"transition": {
+						"menu_item": "fadeInDown",
+						"post_block": "fadeIn",
+						"post_header": "fadeInDown",
+						"post_body": "fadeInDown",
+						"coll_header": "fadeInLeft",
+						"sidebar": "fadeInUp"
+					}
+				},
+				"i18n": {
+					"placeholder": "搜索...",
+					"empty": "没有找到任何搜索结果：${query}",
+					"hits_time": "找到 ${hits} 个搜索结果（用时 ${time} 毫秒）",
+					"hits": "找到 ${hits} 个搜索结果"
+				},
+				"path": "/search.json",
+				"localsearch": {
+					"enable": true,
+					"top_n_per_article": 3,
+					"unescape": true,
+					"preload": false
+				}
+			}
+		</script>
+		<script defer="" src="/js/config.js"></script>
+		<meta content="GO GO GO!" name="description" />
+		<meta content="website" property="og:type" />
+		<meta content="NNZX" property="og:title" />
+		<meta content="https://none/" property="og:url" />
+		<meta content="NNZX" property="og:site_name" />
+		<meta content="GO GO GO!" property="og:description" />
+		<meta content="zh_CN" property="og:locale" />
+		<meta content="NNZX" property="article:author" />
+		<meta content="galgame" property="article:tag" />
+		<meta content="summary" name="twitter:card" />
+		<link href="https://none/" rel="canonical" />
+		<script class="next-config" data-name="page" type="application/json">
+			{
+				"sidebar": "",
+				"isHome": true,
+				"isPost": false,
+				"lang": "zh-CN",
+				"comments": "",
+				"permalink": "",
+				"path": "index.html",
+				"title": ""
+			}
+		</script>
+		<script
+			class="next-config"
+			data-name="calendar"
+			type="application/json"
+		>
+			""
+		</script>
+		<title>NNZX'S BLOG</title>
+		<script
+			crossorigin="anonymous"
+			defer=""
+			integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY="
+			src="https://registry.npmmirror.com/animejs/3.2.1/files/lib/anime.min.js"
+		></script>
+		<script
+			crossorigin="anonymous"
+			defer=""
+			integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao="
+			src="https://registry.npmmirror.com/@next-theme/pjax/0.6.0/files/pjax.min.js"
+		></script>
+		<script
+			crossorigin="anonymous"
+			defer=""
+			integrity="sha256-hiUEBwFEpLF6DlB8sGXlKo4kPZ46Ui4qGpd0vrVkOm4="
+			src="https://registry.npmmirror.com/@fancyapps/ui/5.0.36/files/dist/fancybox/fancybox.umd.js"
+		></script>
+		<script
+			crossorigin="anonymous"
+			defer=""
+			integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc="
+			src="https://registry.npmmirror.com/lozad/1.16.0/files/dist/lozad.min.js"
+		></script>
+		<script defer="" src="/js/utils.js"></script>
+		<script defer="" src="/js/sidebar.js"></script>
+		<script defer="" src="/js/next-boot.js"></script>
+		<script defer="" src="/js/pjax.js"></script>
+		<script
+			crossorigin="anonymous"
+			defer=""
+			integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc="
+			src="https://registry.npmmirror.com/hexo-generator-searchdb/1.4.1/files/dist/search.js"
+		></script>
+		<script defer="" src="/js/third-party/search/local-search.js"></script>
+		<script defer="" src="/js/third-party/fancybox.js"></script>
+		<script defer="" src="/js/third-party/pace.js"></script>
+		<script src="/js/module-loader.js"></script>
+
+		<script
+			crossorigin="anonymous"
+			defer=""
+			integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM="
+			src="https://registry.npmmirror.com/quicklink/2.3.0/files/dist/quicklink.umd.js"
+		></script>
+		<script
+			class="next-config"
+			data-name="quicklink"
+			type="application/json"
+		>
+			{
+				"enable": true,
+				"home": true,
+				"archive": true,
+				"delay": true,
+				"timeout": 3000,
+				"priority": true,
+				"url": "https://none/"
+			}
+		</script>
+		<script defer="" src="/js/third-party/quicklink.js"></script>
+		<script async="" src="/lib/fireworks.js"></script>
+		<noscript><link href="/css/noscript.css" rel="stylesheet" /></noscript>
+		<script defer="" src="/sw-dom.js"></script>
+		<link
+			href="/atom.xml"
+			rel="alternate"
+			title="NNZX'S BLOG"
+			type="application/atom+xml"
+		/>
+		<link
+			href="/rss2.xml"
+			rel="alternate"
+			title="NNZX'S BLOG"
+			type="application/rss+xml"
+		/>
+	</head>
+	<body itemscope="" itemtype="http://schema.org/WebPage">
+		<div class="headband"></div>
+		<main class="main">
+			<div class="column">
+				<header
+					class="header"
+					itemscope=""
+					itemtype="http://schema.org/WPHeader"
+				>
+					<div class="site-brand-container">
+						<div class="site-nav-toggle">
+							<div
+								aria-label="切换导航栏"
+								class="toggle"
+								role="button"
+							>
+								<span class="toggle-line"></span>
+								<span class="toggle-line"></span>
+								<span class="toggle-line"></span>
+							</div>
+						</div>
+						<div class="site-meta">
+							<a class="brand" href="/" rel="start"
+								><i class="logo-line"></i>
+								<h1 class="site-title">~NNZX~</h1>
+								<i class="logo-line"></i
+							></a>
+							<p class="site-subtitle" itemprop="description">
+								Personal Blog
+							</p>
+						</div>
+						<div class="site-nav-right">
+							<div
+								aria-label="搜索"
+								class="toggle popup-trigger"
+								role="button"
+							>
+								<i class="fa fa-search fa-fw fa-lg"></i>
+							</div>
+						</div>
+					</div>
+					<nav class="site-nav">
+						<ul class="main-menu menu">
+							<li class="menu-item menu-item-home">
+								<a href="/" rel="section"
+									><i class="fa fa-home fa-fw"></i>首页</a
+								>
+							</li>
+							<li class="menu-item menu-item-archives">
+								<a href="/archives/" rel="section"
+									><i class="fa fa-archive fa-fw"></i
+									>归档<span class="badge">1</span></a
+								>
+							</li>
+							<li class="menu-item menu-item-categories">
+								<a href="/categories/" rel="section"
+									><i class="fa fa-th fa-fw"></i>分类<span
+										class="badge"
+										>13</span
+									></a
+								>
+							</li>
+							<li class="menu-item menu-item-留言">
+								<a href="/comments/" rel="section"
+									><i class="fas fa-comment-dots fa-fw"></i
+									>留言</a
+								>
+							</li>
+							<li class="menu-item menu-item-友链">
+								<a href="/links/" rel="section"
+									><i class="fas fa-link fa-fw"></i>友链</a
+								>
+							</li>
+							<li class="menu-item menu-item-云盘">
+								<a href="/404/" rel="section"
+									><i class="fas fa-cloud fa-fw"></i>云盘</a
+								>
+							</li>
+							<li class="menu-item menu-item-网盘">
+								<a href="/404/" rel="section"
+									><i class="fas fa-hard-drive fa-fw"></i
+									>网盘</a
+								>
+							</li>
+							<li class="menu-item menu-item-捐赠">
+								<a href="/donate/" rel="section"
+									><i
+										class="fas fa-hand-holding-dollar fa-fw"
+									></i
+									>捐赠</a
+								>
+							</li>
+							<li class="menu-item menu-item-广告">
+								<a href="/ad/" rel="section"
+									><i class="fa fa-rectangle-ad fa-fw"></i
+									>广告</a
+								>
+							</li>
+							<li class="menu-item menu-item-about">
+								<a href="/about/" rel="section"
+									><i class="fa fa-user fa-fw"></i>关于</a
+								>
+							</li>
+							<li class="menu-item menu-item-search">
+								<a class="popup-trigger" role="button"
+									><i class="fa fa-search fa-fw"></i>搜索</a
+								>
+							</li>
+						</ul>
+					</nav>
+					<div class="search-pop-overlay">
+						<div class="popup search-popup">
+							<div class="search-header">
+								<span class="search-icon"
+									><i class="fa fa-search"></i
+								></span>
+								<div class="search-input-container">
+									<input
+										autocapitalize="off"
+										autocomplete="off"
+										class="search-input"
+										maxlength="80"
+										placeholder="搜索..."
+										spellcheck="false"
+										type="search"
+									/>
+								</div>
+								<span class="popup-btn-close" role="button"
+									><i class="fa fa-times-circle"></i
+								></span>
+							</div>
+							<div class="search-result-container">
+								<div class="search-result-icon">
+									<i class="fa fa-spinner fa-pulse fa-5x"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</header>
+				<aside class="sidebar">
+					<div
+						class="sidebar-inner sidebar-nav-active sidebar-toc-active"
+					>
+						<ul class="sidebar-nav">
+							<li class="sidebar-nav-toc">文章目录</li>
+							<li class="sidebar-nav-overview">站点概览</li>
+						</ul>
+						<div class="sidebar-panel-container">
+							<div class="post-toc-wrap sidebar-panel">
+								<div class="post-toc animated">
+									<ol class="nav">
+										<li class="nav-item nav-level-2">
+											<a
+												class="nav-link"
+												href="#%E6%9C%AA%E6%89%BE%E5%88%B0%E9%A1%B5%E9%9D%A2"
+												><span class="nav-number"
+													>1.</span
+												>
+												<span class="nav-text"
+													>未找到页面</span
+												></a
+											>
+										</li>
+									</ol>
+								</div>
+							</div>
+							<div class="site-overview-wrap sidebar-panel">
+								<div
+									class="site-author animated"
+									itemprop="author"
+									itemscope=""
+									itemtype="http://schema.org/Person"
+								>
+									<img
+										alt="NNZX"
+										class="site-author-image"
+										itemprop="image"
+										src="/img/gaomu.png"
+									/>
+									<p class="site-author-name" itemprop="name">
+										~NNZX~
+									</p>
+									<div
+										class="site-description"
+										itemprop="description"
+									>
+										GO GO GO!
+									</div>
+								</div>
+								<div class="links-of-author animated">
+									<span class="links-of-author-item"
+										><span
+											class="exturl"
+											data-url="aHR0cHM6Ly9naXRodWIuY29tL05OWlgwMjQz"
+											title="GitHub → https://github.com/NNZX0243"
+											><i class="fab fa-github fa-fw"></i
+											>GitHub</span
+										> </span
+									><span class="links-of-author-item"
+										><span
+											class="exturl"
+											data-url="aHR0cHM6Ly9zcGFjZS5iaWxpYmlsaS5jb20vMzE2NzY2MTEx"
+											title="bilibili → https://space.bilibili.com/316766111"
+											><i
+												class="fab fa-bilibili fa-fw"
+											></i
+											>bilibili</span
+										> </span
+									><span class="links-of-author-item"
+										><span
+											class="exturl"
+											data-url=""
+											title="Telegram → https://t.me/"
+											><i
+												class="fab fa-telegram fa-fw"
+											></i
+											>Telegram</span
+										> </span
+									><span class="links-of-author-item"
+										><span
+											class="exturl"
+											data-url="bWFpbHRvOm1vaHVhMjAyNEBwcm90b24ubWU="
+											title="E-mail → mailto:mohua2024@proton.me"
+											><i class="fa fa-envelope fa-fw"></i
+											>E-mail</span
+										> </span
+									><span class="links-of-author-item"
+										><span
+											class="exturl"
+											data-url=" "
+											title="QQ 社群 → http://qm.qq.com/"
+											><i class="fab fa-qq fa-fw"></i>QQ
+											社群</span
+										> </span
+									><span class="links-of-author-item"
+										><span
+											class="exturl"
+											data-url=" "
+											title="腾讯频道 → https://pd.qq.com/"
+											><i
+												class="fas fa-comments fa-fw"
+											></i
+											>腾讯频道</span
+										> </span
+									><span class="links-of-author-item"
+										><span
+											class="exturl"
+											data-url=" "
+											title="Twitter → https://twitter.com/"
+											><i class="fab fa-twitter fa-fw"></i
+											>Twitter</span
+										> </span
+									><span class="links-of-author-item"
+										><a
+											href="/atom.xml"
+											rel="noopener me"
+											title="Feed → /atom.xml"
+											><i class="fa fa-rss fa-fw"></i
+											>Feed</a
+										></span
+									>
+								</div>
+							</div>
+						</div>
+						<div
+							aria-label="返回顶部"
+							class="back-to-top animated"
+							role="button"
+						>
+							<i class="fa fa-arrow-up"></i> <span>0%</span>
+						</div>
+					</div>
+					<div class="sidebar-inner sidebar-blogroll">
+						<div class="links-of-blogroll animated">
+							<div class="links-of-blogroll-title">
+								<i class="fa fa-globe fa-fw"></i> 链接
+							</div>
+							<ul class="links-of-blogroll-list">
+								<li class="links-of-blogroll-item">
+									<span
+										class="exturl"
+										data-url="aHR0cHM6Ly93aWtpcGVkaWEub3JnLw=="
+										title="https://wikipedia.org/"
+										>维基百科 - 自由的百科全书</span
+									>
+								</li>
+								<li class="links-of-blogroll-item">
+									<span
+										class="exturl"
+										data-url="aHR0cHM6Ly9tb2VnaXJsLm9yZy5jbi8="
+										title="https://moegirl.org.cn/"
+										>萌娘百科 - 万物皆可萌的百科全书</span
+									>
+								</li>
+								<li class="links-of-blogroll-item">
+									<span
+										class="exturl"
+										data-url="aHR0cHM6Ly93d3cucmFpbnl1bi5jb20vTlRNMU1EVTNfP3M9Vk5T"
+										title="https://www.rainyun.com/NTM1MDU3_?s=VNS"
+										>雨云 - 新一代云服务提供商</span
+									>
+								</li>
+								<li class="links-of-blogroll-item">
+									<span
+										class="exturl"
+										data-url="aHR0cHM6Ly9jb29rLmFpdXJzb2Z0LmNuLw=="
+										title="https://cook.aiursoft.cn/"
+										>How To Cook - 程序员做饭指南</span
+									>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="pjax"></div>
+				</aside>
+			</div>
+			<div class="main-inner page posts-expand">
+				<div class="post-block" lang="zh-CN">
+					<header class="post-header">
+						<h1 class="post-title" itemprop="name headline">
+							404 Not Found<span
+								class="exturl post-edit-link"
+								data-url="aHR0cHM6Ly9naXRodWIuY29tL0FkaW5nQXBrZ2cvdm5zL2VkaXQvbWFpbi9zb3VyY2UvNDA0L2luZGV4Lm1k"
+								title="编辑"
+								><i class="fa fa-pen-nib"></i
+							></span>
+						</h1>
+						<div class="post-meta-container"></div>
+					</header>
+					<div class="post-body">
+						<h2 id="未找到页面">
+							<a class="markdownIt-Anchor" href="#未找到页面"></a>
+							未找到页面
+						</h2>
+						<p>你当前访问的页面无效~~</p>
+						<script>
+							setTimeout(function () {
+								window.location.replace('/')
+							}, 5e3)
+						</script>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer-inner">
+				<div class="copyright">
+					© 2024 – <span itemprop="copyrightYear">2025</span>
+					<span class="with-love"><i class="fa fa-heart"></i> </span
+					><span class="author" itemprop="copyrightHolder"
+						>~NNZX~</span
+					>
+				</div>
+				<script
+					async
+					src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"
+				></script>
+				<div class="busuanzi-count">
+					<span class="post-meta-item" id="busuanzi_container_site_uv"
+						><span class="post-meta-item-icon"
+							><i class="fa fa-user"></i> </span
+						><span class="site-uv" title="总访客量"
+							><span
+								id="busuanzi_value_site_uv"
+							></span> </span></span
+					><span
+						class="post-meta-item"
+						id="busuanzi_container_site_pv"
+						><span class="post-meta-item-icon"
+							><i class="fa fa-eye"></i> </span
+						><span class="site-pv" title="总访问量"
+							><span id="busuanzi_value_site_pv"></span></span
+					></span>
+				</div>
+				<script>
+					if (
+						null == window.localStorage.getItem('fpson') ||
+						'1' == window.localStorage.getItem('fpson')
+					) {
+						var rAF =
+								window.requestAnimationFrame ||
+								window.webkitRequestAnimationFrame ||
+								function (e) {
+									window.setTimeout(e, 1e3 / 60)
+								},
+							frame = 0,
+							allFrameCount = 0,
+							lastTime = Date.now(),
+							lastFameTime = Date.now(),
+							loop = function () {
+								var e = Date.now(),
+									t = e - lastFameTime,
+									n = Math.round(1e3 / t)
+								if (
+									((lastFameTime = e),
+									allFrameCount++,
+									frame++,
+									e > 1e3 + lastTime)
+								) {
+									if (
+										(n = Math.round(
+											(1e3 * frame) / (e - lastTime)
+										)) <= 5
+									)
+										var o =
+											'<span style="color:#bd0000">卡成ppt🤢</span>'
+									else if (n <= 15)
+										o =
+											'<span style="color:red">电竞级帧率😖</span>'
+									else if (n <= 25)
+										o =
+											'<span style="color:orange">有点难受😨</span>'
+									else if (n < 35)
+										o =
+											'<span style="color:#9338e6">不太流畅🙄</span>'
+									else if (n <= 45)
+										o =
+											'<span style="color:#08b7e4">还不错哦😁</span>'
+									else
+										o =
+											'<span style="color:#39c5bb">十分流畅🤣</span>'
+									;(document.getElementById(
+										'fps'
+									).innerHTML = `FPS:${n} ${o}`),
+										(frame = 0),
+										(lastTime = e)
+								}
+								rAF(loop)
+							}
+						loop()
+					} else
+						document.getElementById('fps').style =
+							'display:none!important'
+					const observer = new MutationObserver(function (e) {
+						const t = document.querySelector('.aplayer-icon-lrc')
+						t &&
+							(setTimeout(function () {
+								t.click()
+							}, 1),
+							observer.disconnect())
+					})
+					observer.observe(document, { childList: !0, subtree: !0 })
+					function initializeRuntimeCounter() {
+						const e = new Date('2024/01/27 21:52:00')
+						function t() {
+							const t = new Date()
+							t.setTime(t.getTime() + 250)
+							const n = (t - e) / 1e3 / 60 / 60 / 24,
+								o = Math.floor(n),
+								r = (t - e) / 1e3 / 60 / 60 - 24 * o,
+								i = Math.floor(r).toString().padStart(2, '0'),
+								a = (t - e) / 1e3 / 60 - 1440 * o - 60 * i,
+								s = Math.floor(a).toString().padStart(2, '0'),
+								l =
+									(t - e) / 1e3 -
+									86400 * o -
+									3600 * i -
+									60 * s,
+								c = Math.round(l).toString().padStart(2, '0')
+							;(document.getElementById('timeDate').innerHTML =
+								'距今已艰难运行了&nbsp' + o + '&nbsp天&nbsp'),
+								(document.getElementById('times').innerHTML =
+									i +
+									'&nbsp小时&nbsp' +
+									s +
+									'&nbsp分&nbsp' +
+									c +
+									'&nbsp秒')
+						}
+						t(), setInterval(t, 1e3)
+					}
+					document.addEventListener(
+						'DOMContentLoaded',
+						initializeRuntimeCounter
+					),
+						document.addEventListener(
+							'pjax:complete',
+							initializeRuntimeCounter
+						)
+					const copyrightAuthor = document
+						.querySelector('.copyright')
+						.querySelector('.author')
+					copyrightAuthor.addEventListener('click', (e) => {
+						window.open('https://ciallo.cc/')
+					}),
+						copyrightAuthor.addEventListener('mouseover', (e) => {
+							;(copyrightAuthor.style.textDecoration =
+								'underline'),
+								(copyrightAuthor.style.cursor = 'pointer')
+						}),
+						copyrightAuthor.addEventListener('mouseout', (e) => {
+							copyrightAuthor.style.textDecoration = 'none'
+						})
+				</script>
+				<span id="fps"></span
+				><link
+					href="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.css"
+					rel="stylesheet"
+				/><meting-js
+					autoplay=""
+					fixed="true"
+					id="8464409595"
+					list-folded="false"
+					list-max-height="36vh"
+					order="random"
+					server="netease"
+					type="playlist"
+					volume="0.3"
+				></meting-js>
+				<script
+					async=""
+					src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.js"
+				></script>
+				<script
+					async=""
+					src="https://registry.npmmirror.com/meting/latest/files/dist/Meting.min.js"
+				></script>
+			</div>
+		</footer>
+		<div class="toggle sidebar-toggle" role="button">
+			<span class="toggle-line"></span> <span class="toggle-line"></span>
+			<span class="toggle-line"></span>
+		</div>
+		<div class="sidebar-dimmer"></div>
+		<noscript
+			><div class="noscript-warning">
+				Theme NexT works best with JavaScript enabled
+			</div></noscript
+		>
+	</body>
+</html>
