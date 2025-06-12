@@ -217,8 +217,7 @@
 		<script defer="" src="/js/third-party/search/local-search.js"></script>
 		<script defer="" src="/js/third-party/fancybox.js"></script>
 		<script defer="" src="/js/third-party/pace.js"></script>
-		<script src="/js/module-loader.js"></script>
-
+		<script src="/js/global-value.js"></script>
 		<script
 			crossorigin="anonymous"
 			defer=""
@@ -308,14 +307,17 @@
 							<li class="menu-item menu-item-archives">
 								<a href="/archives/" rel="section"
 									><i class="fa fa-archive fa-fw"></i
-									>归档<span class="badge">1</span></a
+									>归档<span id="badge-archives" class="badge"
+										>0</span
+									></a
 								>
 							</li>
 							<li class="menu-item menu-item-categories">
 								<a href="/categories/" rel="section"
 									><i class="fa fa-th fa-fw"></i>分类<span
+										id="badge-categories"
 										class="badge"
-										>13</span
+										>0</span
 									></a
 								>
 							</li>
@@ -366,6 +368,9 @@
 								>
 							</li>
 						</ul>
+						<script>
+							GobalValueUpdate.update()
+						</script>
 					</nav>
 					<div class="search-pop-overlay">
 						<div class="popup search-popup">
@@ -573,7 +578,7 @@
 							><meta
 								content="/img/gaomu.png"
 								itemprop="image" /><meta
-								content="Asuna"
+								content="gaomu"
 								itemprop="name" /></span
 						><span
 							hidden=""
