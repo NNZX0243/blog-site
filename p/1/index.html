@@ -214,6 +214,7 @@
 		<script src="/js/sidebar.js" defer></script>
 		<script src="/js/next-boot.js" defer></script>
 		<script src="/js/pjax.js" defer></script>
+		<script src="/js/global-value.js"></script>
 		<script
 			src="https://registry.npmmirror.com/hexo-generator-searchdb/1.4.1/files/dist/search.js"
 			integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc="
@@ -317,14 +318,17 @@
 							<li class="menu-item menu-item-archives">
 								<a href="/archives/" rel="section"
 									><i class="fa fa-archive fa-fw"></i
-									>归档<span class="badge">1</span></a
+									>归档<span id="badge-archives" class="badge"
+										>0</span
+									></a
 								>
 							</li>
 							<li class="menu-item menu-item-categories">
 								<a href="/categories/" rel="section"
 									><i class="fa fa-th fa-fw"></i>分类<span
+										id="badge-categories"
 										class="badge"
-										>13</span
+										>0</span
 									></a
 								>
 							</li>
@@ -375,7 +379,11 @@
 								>
 							</li>
 						</ul>
+						<script>
+							GobalValueUpdate.update()
+						</script>
 					</nav>
+
 					<div class="search-pop-overlay">
 						<div class="popup search-popup">
 							<div class="search-header">

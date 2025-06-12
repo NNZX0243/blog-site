@@ -10,7 +10,7 @@ REPLACEMENT_RULES = [
         # 要查找的HTML块结束标签
         "end_tag": '</nav>',
         # 替换内容文件的路径
-        "replacement_file": "nav-class-site-nav.html",
+        "replacement_file": "./common/nav-class-site-nav.html",
         # 要处理的文件名模式
         "target_files": "index.html"
     },

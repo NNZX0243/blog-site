@@ -3187,7 +3187,7 @@ body:before {
 	right: 0;
 	top: 0;
 	bottom: 0;
-	background: url('/img/gaomubg.jpg');
+	background: url('/img/gaomubackground.jpg');
 	opacity: 0.3;
 	z-index: -1;
 	background-size: cover;
