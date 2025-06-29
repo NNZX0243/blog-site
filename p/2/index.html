@@ -1,0 +1,253 @@
+<head>
+	<script>
+		;(() => {
+			let sw = navigator.serviceWorker
+			let error = () =>
+				console.error(
+					'Service Worker 注册失败！可能是由于您的浏览器不支持该功能！'
+				)
+			if (
+				!sw
+					?.register('/sw.js')
+
+					?.catch(error)
+			)
+				error()
+		})()
+	</script>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width" />
+	<meta
+		name="theme-color"
+		content="#222"
+		media="(prefers-color-scheme: light)"
+	/>
+	<meta
+		name="theme-color"
+		content="#222"
+		media="(prefers-color-scheme: dark)"
+	/>
+	<meta name="generator" content="NNZX 1.0.0" />
+	<link rel="preconnect" href="https://registry.npmmirror.com" crossorigin />
+	<link
+		rel="apple-touch-icon"
+		sizes="180x180"
+		href="/images/apple-touch-icon-next.png"
+	/>
+	<link
+		rel="icon"
+		type="image/png"
+		sizes="32x32"
+		href="/images/favicon-32x32-next.png"
+	/>
+	<link
+		rel="icon"
+		type="image/png"
+		sizes="16x16"
+		href="/images/favicon-16x16-next.png"
+	/>
+	<link rel="mask-icon" href="/images/logo.svg" color="#222" />
+	<meta
+		name="google-site-verification"
+		content="Makh0QpTE_cFQ_WZF3qShdl6cTicB36RA97vazztCDg"
+	/>
+	<meta name="msvalidate.01" content="62B427EB1357726A1F0EAD7D7C60105A" />
+	<meta name="baidu-site-verification" content="codeva-LJbs7UYunw" />
+	<link rel="stylesheet" href="/css/main.css" />
+	<link
+		rel="stylesheet"
+		href="https://registry.npmmirror.com/@fortawesome/fontawesome-free/6.7.2/files/css/all.min.css"
+		integrity="sha256-dABdfBfUoC8vJUBOwGVdm8L9qlMWaHTIfXt+7GnZCIo="
+		crossorigin="anonymous"
+	/>
+	<link
+		rel="stylesheet"
+		href="https://registry.npmmirror.com/@fancyapps/ui/5.0.36/files/dist/fancybox/fancybox.css"
+		integrity="sha256-zM8WXtG4eUn7dKKNMTuoWZub++VnSfaOpA/8PJfvTBo="
+		crossorigin="anonymous"
+	/>
+	<link
+		rel="stylesheet"
+		href="https://registry.npmmirror.com/pace-js/1.2.4/files/themes/blue/pace-theme-flash.css"
+	/>
+	<script
+		src="https://registry.npmmirror.com/pace-js/1.2.4/files/pace.min.js"
+		integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0="
+		crossorigin="anonymous"
+		defer
+	></script>
+	<script class="next-config" data-name="main" type="application/json">
+		{
+			"hostname": "nnzxblog.cn",
+			"root": "/",
+			"images": "/images",
+			"scheme": "Gemini",
+			"darkmode": true,
+			"version": "8.23.0",
+			"exturl": true,
+			"sidebar": {
+				"position": "left",
+				"width_expanded": 320,
+				"width_dual_column": 240,
+				"display": "post",
+				"padding": 18,
+				"offset": 12
+			},
+			"hljswrap": true,
+			"copycode": { "enable": true, "style": "mac" },
+			"fold": { "enable": true, "height": 500 },
+			"bookmark": {
+				"enable": false,
+				"color": "#222",
+				"save": "manual"
+			},
+			"mediumzoom": false,
+			"lazyload": true,
+			"pangu": false,
+			"comments": {
+				"style": "tabs",
+				"active": null,
+				"storage": true,
+				"lazyload": true,
+				"nav": null
+			},
+			"stickytabs": false,
+			"motion": {
+				"enable": false,
+				"async": true,
+				"duration": 20,
+				"transition": {
+					"menu_item": "fadeInDown",
+					"post_block": "fadeIn",
+					"post_header": "fadeInDown",
+					"post_body": "fadeInDown",
+					"coll_header": "fadeInLeft",
+					"sidebar": "fadeInUp"
+				}
+			},
+			"i18n": {
+				"placeholder": "搜索...",
+				"empty": "没有找到任何搜索结果：${query}",
+				"hits_time": "找到 ${hits} 个搜索结果（用时 ${time} 毫秒）",
+				"hits": "找到 ${hits} 个搜索结果"
+			},
+			"path": "/search.json",
+			"localsearch": {
+				"enable": true,
+				"top_n_per_article": 3,
+				"unescape": true,
+				"preload": false
+			}
+		}
+	</script>
+	<script src="/js/config.js" defer></script>
+	<meta name="description" content="堆排序与拓扑排序" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="堆排序与拓扑排序" />
+	<meta property="og:url" content="" />
+	<meta property="og:site_name" content="~NNZX~'s BLOG" />
+	<meta property="og:description" content="堆排序与拓扑排序" />
+	<meta property="og:locale" content="zh_CN" />
+	<meta
+		property="article:published_time"
+		content="2025-06-09T13:57:09.000Z"
+	/>
+	<meta property="article:modified_time" content="2025-06-09T13:57:09.000Z" />
+	<meta property="article:author" content="~NNZX~" />
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:image" content="" />
+	<link rel="canonical" href="" />
+	<script class="next-config" data-name="page" type="application/json">
+		{
+			"sidebar": "",
+			"isHome": false,
+			"isPost": true,
+			"lang": "zh-CN",
+			"comments": true,
+			"permalink": "",
+			"path": "p/1/",
+			"title": "堆排序与拓扑排序"
+		}
+	</script>
+	<script class="next-config" data-name="calendar" type="application/json">
+		""
+	</script>
+	<title>堆排序与拓扑排序</title>
+	<script
+		src="https://registry.npmmirror.com/animejs/3.2.1/files/lib/anime.min.js"
+		integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY="
+		crossorigin="anonymous"
+		defer
+	></script>
+	<script
+		src="https://registry.npmmirror.com/@next-theme/pjax/0.6.0/files/pjax.min.js"
+		integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao="
+		crossorigin="anonymous"
+		defer
+	></script>
+	<script
+		src="https://registry.npmmirror.com/@fancyapps/ui/5.0.36/files/dist/fancybox/fancybox.umd.js"
+		integrity="sha256-hiUEBwFEpLF6DlB8sGXlKo4kPZ46Ui4qGpd0vrVkOm4="
+		crossorigin="anonymous"
+		defer
+	></script>
+	<script
+		src="https://registry.npmmirror.com/lozad/1.16.0/files/dist/lozad.min.js"
+		integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc="
+		crossorigin="anonymous"
+		defer
+	></script>
+	<script src="/js/utils.js" defer></script>
+	<script src="/js/sidebar.js" defer></script>
+	<script src="/js/next-boot.js" defer></script>
+	<script src="/js/pjax.js" defer></script>
+	<script src="/js/global-value.js"></script>
+	<script
+		src="https://registry.npmmirror.com/hexo-generator-searchdb/1.4.1/files/dist/search.js"
+		integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc="
+		crossorigin="anonymous"
+		defer
+	></script>
+	<script src="/js/third-party/search/local-search.js" defer></script>
+	<script src="/js/third-party/fancybox.js" defer></script>
+	<script src="/js/third-party/pace.js" defer></script>
+	<script
+		data-pjax
+		async
+		src="https://registry.npmmirror.com/js-asuna/latest/files/js/bsz.pure.mini.js"
+	></script>
+	<script
+		src="https://registry.npmmirror.com/quicklink/2.3.0/files/dist/quicklink.umd.js"
+		integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM="
+		crossorigin="anonymous"
+		defer
+	></script>
+	<script class="next-config" data-name="quicklink" type="application/json">
+		{
+			"enable": true,
+			"home": true,
+			"archive": true,
+			"delay": true,
+			"timeout": 3000,
+			"priority": true,
+			"url": " "
+		}
+	</script>
+	<script src="/js/third-party/quicklink.js" defer></script>
+	<script async src="/lib/fireworks.js"></script>
+	<noscript><link rel="stylesheet" href="/css/noscript.css" /></noscript>
+	<script defer src="/sw-dom.js"></script>
+	<link
+		rel="alternate"
+		href="/atom.xml"
+		title="NNZX'BLOG"
+		type="application/atom+xml"
+	/>
+	<link
+		rel="alternate"
+		href="/rss2.xml"
+		title="NNZX'BLOG"
+		type="application/rss+xml"
+	/>
+</head>
+
