@@ -5,5 +5,12 @@
 		"content": "\n本文介绍堆排序与拓扑排序算法原理\n",
 		"categories": ["Algorithm"],
 		"tags": []
+	},
+	{
+		"title": "FRP内网穿透",
+		"url": "/p/2/",
+		"content": "\n本文介绍如何利用云服务器公网IP实现FRP内网穿透\n",
+		"categories": ["Other"],
+		"tags": []
 	}
 ]

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <head>
 	<script>
 		;(() => {
@@ -251,3 +252,1684 @@
 	/>
 </head>
 
+=======
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<script>
+			;(() => {
+				let sw = navigator.serviceWorker
+				let error = () =>
+					console.error(
+						'Service Worker 注册失败！可能是由于您的浏览器不支持该功能！'
+					)
+				if (
+					!sw
+						?.register('/sw.js')
+
+						?.catch(error)
+				)
+					error()
+			})()
+		</script>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta
+			name="theme-color"
+			content="#222"
+			media="(prefers-color-scheme: light)"
+		/>
+		<meta
+			name="theme-color"
+			content="#222"
+			media="(prefers-color-scheme: dark)"
+		/>
+		<meta name="generator" content="NNZX 1.0.0" />
+		<link
+			rel="preconnect"
+			href="https://registry.npmmirror.com"
+			crossorigin
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="/images/apple-touch-icon-next.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="/images/favicon-32x32-next.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="/images/favicon-16x16-next.png"
+		/>
+		<link rel="mask-icon" href="/images/logo.svg" color="#222" />
+		<meta
+			name="google-site-verification"
+			content="Makh0QpTE_cFQ_WZF3qShdl6cTicB36RA97vazztCDg"
+		/>
+		<meta name="msvalidate.01" content="62B427EB1357726A1F0EAD7D7C60105A" />
+		<meta name="baidu-site-verification" content="codeva-LJbs7UYunw" />
+		<link rel="stylesheet" href="/css/main.css" />
+		<link
+			rel="stylesheet"
+			href="https://registry.npmmirror.com/@fortawesome/fontawesome-free/6.7.2/files/css/all.min.css"
+			integrity="sha256-dABdfBfUoC8vJUBOwGVdm8L9qlMWaHTIfXt+7GnZCIo="
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://registry.npmmirror.com/@fancyapps/ui/5.0.36/files/dist/fancybox/fancybox.css"
+			integrity="sha256-zM8WXtG4eUn7dKKNMTuoWZub++VnSfaOpA/8PJfvTBo="
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://registry.npmmirror.com/pace-js/1.2.4/files/themes/blue/pace-theme-flash.css"
+		/>
+		<script
+			src="https://registry.npmmirror.com/pace-js/1.2.4/files/pace.min.js"
+			integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0="
+			crossorigin="anonymous"
+			defer
+		></script>
+		<script class="next-config" data-name="main" type="application/json">
+			{
+				"hostname": "nnzxblog.cn",
+				"root": "/",
+				"images": "/images",
+				"scheme": "Gemini",
+				"darkmode": true,
+				"version": "8.23.0",
+				"exturl": true,
+				"sidebar": {
+					"position": "left",
+					"width_expanded": 320,
+					"width_dual_column": 240,
+					"display": "post",
+					"padding": 18,
+					"offset": 12
+				},
+				"hljswrap": true,
+				"copycode": { "enable": true, "style": "mac" },
+				"fold": { "enable": true, "height": 500 },
+				"bookmark": {
+					"enable": false,
+					"color": "#222",
+					"save": "manual"
+				},
+				"mediumzoom": false,
+				"lazyload": true,
+				"pangu": false,
+				"comments": {
+					"style": "tabs",
+					"active": null,
+					"storage": true,
+					"lazyload": true,
+					"nav": null
+				},
+				"stickytabs": false,
+				"motion": {
+					"enable": false,
+					"async": true,
+					"duration": 20,
+					"transition": {
+						"menu_item": "fadeInDown",
+						"post_block": "fadeIn",
+						"post_header": "fadeInDown",
+						"post_body": "fadeInDown",
+						"coll_header": "fadeInLeft",
+						"sidebar": "fadeInUp"
+					}
+				},
+				"i18n": {
+					"placeholder": "搜索...",
+					"empty": "没有找到任何搜索结果：${query}",
+					"hits_time": "找到 ${hits} 个搜索结果（用时 ${time} 毫秒）",
+					"hits": "找到 ${hits} 个搜索结果"
+				},
+				"path": "/search.json",
+				"localsearch": {
+					"enable": true,
+					"top_n_per_article": 3,
+					"unescape": true,
+					"preload": false
+				}
+			}
+		</script>
+		<script src="/js/config.js" defer></script>
+		<meta name="description" content="FRP内网穿透" />
+		<meta property="og:type" content="article" />
+		<meta property="og:title" content="FRP内网穿透" />
+		<meta property="og:url" content="https://nnzxblog.cn/p/2" />
+		<meta property="og:site_name" content="~NNZX~'s BLOG" />
+		<meta property="og:description" content="FRP内网穿透" />
+		<meta property="og:locale" content="zh_CN" />
+		<meta
+			property="article:published_time"
+			content="2025-06-28T14:39:33.000Z"
+		/>
+		<meta
+			property="article:modified_time"
+			content="2025-06-28T14:39:33.000Z"
+		/>
+		<meta property="article:author" content="~NNZX~" />
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:image" content="" />
+		<link rel="canonical" href="" />
+		<script class="next-config" data-name="page" type="application/json">
+			{
+				"sidebar": "",
+				"isHome": false,
+				"isPost": true,
+				"lang": "zh-CN",
+				"comments": true,
+				"permalink": "",
+				"path": "p/2/",
+				"title": "FRP内网穿透"
+			}
+		</script>
+		<script
+			class="next-config"
+			data-name="calendar"
+			type="application/json"
+		>
+			""
+		</script>
+		<title>FRP内网穿透</title>
+		<script
+			src="https://registry.npmmirror.com/animejs/3.2.1/files/lib/anime.min.js"
+			integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY="
+			crossorigin="anonymous"
+			defer
+		></script>
+		<script
+			src="https://registry.npmmirror.com/@next-theme/pjax/0.6.0/files/pjax.min.js"
+			integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao="
+			crossorigin="anonymous"
+			defer
+		></script>
+		<script
+			src="https://registry.npmmirror.com/@fancyapps/ui/5.0.36/files/dist/fancybox/fancybox.umd.js"
+			integrity="sha256-hiUEBwFEpLF6DlB8sGXlKo4kPZ46Ui4qGpd0vrVkOm4="
+			crossorigin="anonymous"
+			defer
+		></script>
+		<script
+			src="https://registry.npmmirror.com/lozad/1.16.0/files/dist/lozad.min.js"
+			integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc="
+			crossorigin="anonymous"
+			defer
+		></script>
+		<script src="/js/utils.js" defer></script>
+		<script src="/js/sidebar.js" defer></script>
+		<script src="/js/next-boot.js" defer></script>
+		<script src="/js/pjax.js" defer></script>
+		<script src="/js/global-value.js"></script>
+		<script
+			src="https://registry.npmmirror.com/hexo-generator-searchdb/1.4.1/files/dist/search.js"
+			integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc="
+			crossorigin="anonymous"
+			defer
+		></script>
+		<script src="/js/third-party/search/local-search.js" defer></script>
+		<script src="/js/third-party/fancybox.js" defer></script>
+		<script src="/js/third-party/pace.js" defer></script>
+		<script
+			data-pjax
+			async
+			src="https://registry.npmmirror.com/js-asuna/latest/files/js/bsz.pure.mini.js"
+		></script>
+		<script
+			src="https://registry.npmmirror.com/quicklink/2.3.0/files/dist/quicklink.umd.js"
+			integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM="
+			crossorigin="anonymous"
+			defer
+		></script>
+		<script
+			class="next-config"
+			data-name="quicklink"
+			type="application/json"
+		>
+			{
+				"enable": true,
+				"home": true,
+				"archive": true,
+				"delay": true,
+				"timeout": 3000,
+				"priority": true,
+				"url": " "
+			}
+		</script>
+		<script src="/js/third-party/quicklink.js" defer></script>
+		<script async src="/lib/fireworks.js"></script>
+		<noscript><link rel="stylesheet" href="/css/noscript.css" /></noscript>
+		<script defer src="/sw-dom.js"></script>
+		<link
+			rel="alternate"
+			href="/atom.xml"
+			title="NNZX'BLOG"
+			type="application/atom+xml"
+		/>
+		<link
+			rel="alternate"
+			href="/rss2.xml"
+			title="NNZX'BLOG"
+			type="application/rss+xml"
+		/>
+	</head>
+	<body itemscope itemtype="http://schema.org/WebPage">
+		<div class="headband"></div>
+		<main class="main">
+			<div class="column">
+				<header
+					class="header"
+					itemscope
+					itemtype="http://schema.org/WPHeader"
+				>
+					<div class="site-brand-container">
+						<div class="site-nav-toggle">
+							<div
+								aria-label="切换导航栏"
+								class="toggle"
+								role="button"
+							>
+								<span class="toggle-line"></span>
+								<span class="toggle-line"></span>
+								<span class="toggle-line"></span>
+							</div>
+						</div>
+						<div class="site-meta">
+							<a class="brand" href="/" rel="start"
+								><i class="logo-line"></i>
+								<h1 class="site-title">~NNZX~</h1>
+								<i class="logo-line"></i
+							></a>
+							<p class="site-subtitle" itemprop="description">
+								Personal Blog
+							</p>
+						</div>
+						<div class="site-nav-right">
+							<div
+								aria-label="搜索"
+								class="toggle popup-trigger"
+								role="button"
+							>
+								<i class="fa fa-search fa-fw fa-lg"></i>
+							</div>
+						</div>
+					</div>
+					<nav class="site-nav">
+						<ul class="main-menu menu">
+							<li class="menu-item menu-item-home">
+								<a href="/" rel="section"
+									><i class="fa fa-home fa-fw"></i>首页</a
+								>
+							</li>
+							<li class="menu-item menu-item-archives">
+								<a href="/archives/" rel="section"
+									><i class="fa fa-archive fa-fw"></i
+									>归档<span id="badge-archives" class="badge"
+										>0</span
+									></a
+								>
+							</li>
+							<li class="menu-item menu-item-categories">
+								<a href="/categories/" rel="section"
+									><i class="fa fa-th fa-fw"></i>分类<span
+										id="badge-categories"
+										class="badge"
+										>0</span
+									></a
+								>
+							</li>
+							<li class="menu-item menu-item-留言">
+								<a href="/comments/" rel="section"
+									><i class="fas fa-comment-dots fa-fw"></i
+									>留言</a
+								>
+							</li>
+							<li class="menu-item menu-item-友链">
+								<a href="/links/" rel="section"
+									><i class="fas fa-link fa-fw"></i>友链</a
+								>
+							</li>
+							<li class="menu-item menu-item-云盘">
+								<a href="/404/" rel="section"
+									><i class="fas fa-cloud fa-fw"></i>云盘</a
+								>
+							</li>
+							<li class="menu-item menu-item-网盘">
+								<a href="/404/" rel="section"
+									><i class="fas fa-hard-drive fa-fw"></i
+									>网盘</a
+								>
+							</li>
+							<li class="menu-item menu-item-捐赠">
+								<a href="/donate/" rel="section"
+									><i
+										class="fas fa-hand-holding-dollar fa-fw"
+									></i
+									>捐赠</a
+								>
+							</li>
+							<li class="menu-item menu-item-广告">
+								<a href="/ad/" rel="section"
+									><i class="fa fa-rectangle-ad fa-fw"></i
+									>广告</a
+								>
+							</li>
+							<li class="menu-item menu-item-about">
+								<a href="/about/" rel="section"
+									><i class="fa fa-user fa-fw"></i>关于</a
+								>
+							</li>
+							<li class="menu-item menu-item-search">
+								<a class="popup-trigger" role="button"
+									><i class="fa fa-search fa-fw"></i>搜索</a
+								>
+							</li>
+						</ul>
+						<script>
+							GobalValueUpdate.update()
+						</script>
+					</nav>
+
+					<div class="search-pop-overlay">
+						<div class="popup search-popup">
+							<div class="search-header">
+								<span class="search-icon"
+									><i class="fa fa-search"></i
+								></span>
+								<div class="search-input-container">
+									<input
+										autocapitalize="off"
+										autocomplete="off"
+										class="search-input"
+										maxlength="80"
+										placeholder="搜索..."
+										spellcheck="false"
+										type="search"
+									/>
+								</div>
+								<span class="popup-btn-close" role="button"
+									><i class="fa fa-times-circle"></i
+								></span>
+							</div>
+							<div class="search-result-container">
+								<div class="search-result-icon">
+									<i class="fa fa-spinner fa-pulse fa-5x"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</header>
+				<aside class="sidebar">
+					<div
+						class="sidebar-inner sidebar-nav-active sidebar-toc-active"
+					>
+						<ul class="sidebar-nav">
+							<li class="sidebar-nav-toc">文章目录</li>
+							<li class="sidebar-nav-overview">站点概览</li>
+						</ul>
+						<div class="sidebar-panel-container">
+							<div class="post-toc-wrap sidebar-panel">
+								<div class="post-toc animated">
+									<ol class="nav">
+										<li class="nav-item nav-level-2">
+											<a class="nav-link" href="#1"
+												><span class="nav-number"
+													>1</span
+												>
+												<span class="nav-text"
+													>准备工作</span
+												></a
+											>
+										</li>
+										<li class="nav-item nav-level-2">
+											<a class="nav-link" href="#2"
+												><span class="nav-number"
+													>2
+												</span>
+												<span class="nav-text"
+													>官方文档</span
+												></a
+											>
+										</li>
+										<li class="nav-item nav-level-2">
+											<a class="nav-link" href="#3"
+												><span class="nav-number"
+													>3</span
+												>
+												<span class="nav-text"
+													>云端部署FRP服务</span
+												></a
+											>
+											<ol class="nav-child">
+												<li
+													class="nav-item nav-level-3"
+												>
+													<a
+														class="nav-link"
+														href="#3.1"
+														><span
+															class="nav-number"
+															>3.1
+														</span>
+														<span class="nav-text"
+															>建立文件夹</span
+														></a
+													>
+												</li>
+												<li
+													class="nav-item nav-level-3"
+												>
+													<a
+														class="nav-link"
+														href="#3.2"
+														><span
+															class="nav-number"
+															>3.2
+														</span>
+														<span class="nav-text"
+															>下载frp</span
+														></a
+													>
+												</li>
+												<li
+													class="nav-item nav-level-3"
+												>
+													<a
+														class="nav-link"
+														href="#3.3"
+														><span
+															class="nav-number"
+															>3.3
+														</span>
+														<span class="nav-text"
+															>编辑frp服务端配置文件</span
+														></a
+													>
+												</li>
+												<li
+													class="nav-item nav-level-3"
+												>
+													<a
+														class="nav-link"
+														href="#3.4"
+														><span
+															class="nav-number"
+															>3.4
+														</span>
+														<span class="nav-text"
+															>防火墙配置</span
+														></a
+													>
+												</li>
+												<li
+													class="nav-item nav-level-3"
+												>
+													<a
+														class="nav-link"
+														href="#3.5"
+														><span
+															class="nav-number"
+															>3.5
+														</span>
+														<span class="nav-text"
+															>systemd配置</span
+														></a
+													>
+												</li>
+												<li
+													class="nav-item nav-level-3"
+												>
+													<a
+														class="nav-link"
+														href="#3.6"
+														><span
+															class="nav-number"
+															>3.6
+														</span>
+														<span class="nav-text"
+															>启动frps服务</span
+														></a
+													>
+												</li>
+											</ol>
+										</li>
+										<li class="nav-item nav-level-2">
+											<a class="nav-link" href="#4"
+												><span class="nav-number"
+													>4
+												</span>
+												<span class="nav-text"
+													>云端frps脱离终端运行</span
+												></a
+											>
+											<ol class="nav-child">
+												<li
+													class="nav-item nav-level-3"
+												>
+													<a
+														class="nav-link"
+														href="#4.1"
+														><span
+															class="nav-number"
+															>4.1
+														</span>
+														<span class="nav-text"
+															>安装screen</span
+														></a
+													>
+												</li>
+												<li
+													class="nav-item nav-level-3"
+												>
+													<a
+														class="nav-link"
+														href="#4.2"
+														><span
+															class="nav-number"
+															>4.2
+														</span>
+														<span class="nav-text"
+															>创建screen会话</span
+														></a
+													>
+												</li>
+												<li
+													class="nav-item nav-level-3"
+												>
+													<a
+														class="nav-link"
+														href="#4.3"
+														><span
+															class="nav-number"
+															>4.3
+														</span>
+														<span class="nav-text"
+															>在screen会话中运行frps服务</span
+														></a
+													>
+												</li>
+												<li
+													class="nav-item nav-level-3"
+												>
+													<a
+														class="nav-link"
+														href="#4.4"
+														><span
+															class="nav-number"
+															>4.4
+														</span>
+														<span class="nav-text"
+															>剥离screen会话</span
+														></a
+													>
+												</li>
+												<li
+													class="nav-item nav-level-3"
+												>
+													<a
+														class="nav-link"
+														href="#4.5"
+														><span
+															class="nav-number"
+															>4.5
+														</span>
+														<span class="nav-text"
+															>重新接入screen会话</span
+														></a
+													>
+												</li>
+												<li
+													class="nav-item nav-level-3"
+												>
+													<a
+														class="nav-link"
+														href="#4.6"
+														><span
+															class="nav-number"
+															>4.6
+														</span>
+														<span class="nav-text"
+															>接入会话</span
+														></a
+													>
+												</li>
+												<li
+													class="nav-item nav-level-3"
+												>
+													<a
+														class="nav-link"
+														href="#4.7"
+														><span
+															class="nav-number"
+															>4.7
+														</span>
+														<span class="nav-text"
+															>关闭所有screen会话</span
+														></a
+													>
+												</li>
+											</ol>
+										</li>
+										<li class="nav-item nav-level-2">
+											<a class="nav-link" href="#5"
+												><span class="nav-number"
+													>5
+												</span>
+												<span class="nav-text"
+													>本地客户端内网穿透</span
+												></a
+											>
+											<ol class="nav-child">
+												<li
+													class="nav-item nav-level-3"
+												>
+													<a
+														class="nav-link"
+														href="#5.1"
+														><span
+															class="nav-number"
+															>5.1
+														</span>
+														<span class="nav-text"
+															>建立文件夹</span
+														></a
+													>
+												</li>
+												<li
+													class="nav-item nav-level-3"
+												>
+													<a
+														class="nav-link"
+														href="#5.2"
+														><span
+															class="nav-number"
+															>5.2
+														</span>
+														<span class="nav-text"
+															>编辑frp客户端配置文件</span
+														></a
+													>
+												</li>
+												<li
+													class="nav-item nav-level-3"
+												>
+													<a
+														class="nav-link"
+														href="#5.3"
+														><span
+															class="nav-number"
+															>5.3
+														</span>
+														<span class="nav-text"
+															>启动内网穿透</span
+														></a
+													>
+												</li>
+											</ol>
+										</li>
+									</ol>
+								</div>
+							</div>
+							<div class="site-overview-wrap sidebar-panel">
+								<div
+									class="site-author animated"
+									itemprop="author"
+									itemscope=""
+									itemtype="http://schema.org/Person"
+								>
+									<img
+										alt="NNZX"
+										class="site-author-image"
+										itemprop="image"
+										src="/img/gaomu.png"
+									/>
+									<p class="site-author-name" itemprop="name">
+										~NNZX~
+									</p>
+									<div
+										class="site-description"
+										itemprop="description"
+									>
+										GO GO GO!
+									</div>
+								</div>
+								<div class="links-of-author animated">
+									<span class="links-of-author-item"
+										><span
+											class="exturl"
+											data-url="aHR0cHM6Ly9naXRodWIuY29tL05OWlgwMjQz"
+											title="GitHub → https://github.com/NNZX0243"
+											><i class="fab fa-github fa-fw"></i
+											>GitHub</span
+										> </span
+									><span class="links-of-author-item"
+										><span
+											class="exturl"
+											data-url="aHR0cHM6Ly9zcGFjZS5iaWxpYmlsaS5jb20vMzE2NzY2MTEx"
+											title="bilibili → https://space.bilibili.com/316766111"
+											><i
+												class="fab fa-bilibili fa-fw"
+											></i
+											>bilibili</span
+										> </span
+									><span class="links-of-author-item"
+										><span
+											class="exturl"
+											data-url=""
+											title="Telegram → https://t.me/"
+											><i
+												class="fab fa-telegram fa-fw"
+											></i
+											>Telegram</span
+										> </span
+									><span class="links-of-author-item"
+										><span
+											class="exturl"
+											data-url="bWFpbHRvOm1vaHVhMjAyNEBwcm90b24ubWU="
+											title="E-mail → mailto:mohua2024@proton.me"
+											><i class="fa fa-envelope fa-fw"></i
+											>E-mail</span
+										> </span
+									><span class="links-of-author-item"
+										><span
+											class="exturl"
+											data-url=" "
+											title="QQ 社群 → http://qm.qq.com/"
+											><i class="fab fa-qq fa-fw"></i>QQ
+											社群</span
+										> </span
+									><span class="links-of-author-item"
+										><span
+											class="exturl"
+											data-url=" "
+											title="腾讯频道 → https://pd.qq.com/"
+											><i
+												class="fas fa-comments fa-fw"
+											></i
+											>腾讯频道</span
+										> </span
+									><span class="links-of-author-item"
+										><span
+											class="exturl"
+											data-url=" "
+											title="Twitter → https://twitter.com/"
+											><i class="fab fa-twitter fa-fw"></i
+											>Twitter</span
+										> </span
+									><span class="links-of-author-item"
+										><a
+											href="/atom.xml"
+											rel="noopener me"
+											title="Feed → /atom.xml"
+											><i class="fa fa-rss fa-fw"></i
+											>Feed</a
+										></span
+									>
+								</div>
+							</div>
+						</div>
+						<div
+							class="back-to-top animated"
+							role="button"
+							aria-label="返回顶部"
+						>
+							<i class="fa fa-arrow-up"></i> <span>0%</span>
+						</div>
+					</div>
+					<div class="sidebar-inner sidebar-blogroll">
+						<div class="links-of-blogroll animated">
+							<div class="links-of-blogroll-title">
+								<i class="fa fa-globe fa-fw"></i> 链接
+							</div>
+							<ul class="links-of-blogroll-list">
+								<li class="links-of-blogroll-item">
+									<span
+										class="exturl"
+										data-url="aHR0cHM6Ly93aWtpcGVkaWEub3JnLw=="
+										title="https://wikipedia.org/"
+										>维基百科 - 自由的百科全书</span
+									>
+								</li>
+								<li class="links-of-blogroll-item">
+									<span
+										class="exturl"
+										data-url="aHR0cHM6Ly9tb2VnaXJsLm9yZy5jbi8="
+										title="https://moegirl.org.cn/"
+										>萌娘百科 - 万物皆可萌的百科全书</span
+									>
+								</li>
+								<li class="links-of-blogroll-item">
+									<span
+										class="exturl"
+										data-url="aHR0cHM6Ly93d3cucmFpbnl1bi5jb20vTlRNMU1EVTNfP3M9Vk5T"
+										title="https://www.rainyun.com/NTM1MDU3_?s=VNS"
+										>雨云 - 新一代云服务提供商</span
+									>
+								</li>
+								<li class="links-of-blogroll-item">
+									<span
+										class="exturl"
+										data-url="aHR0cHM6Ly9jb29rLmFpdXJzb2Z0LmNuLw=="
+										title="https://cook.aiursoft.cn/"
+										>How To Cook - 程序员做饭指南</span
+									>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="pjax">
+						<div class="sidebar-inner sidebar-post-related">
+							<div class="animated">
+								<div class="links-of-blogroll-title">
+									<i class="fa fa-signs-post fa-fw"></i>
+									相关文章
+								</div>
+								<ul class="popular-posts"></ul>
+							</div>
+						</div>
+					</div>
+				</aside>
+			</div>
+			<div class="main-inner post posts-expand">
+				<div class="post-block">
+					<article
+						itemscope
+						itemtype="http://schema.org/Article"
+						class="post-content"
+						lang="zh-CN"
+					>
+						<link
+							itemprop="mainEntityOfPage"
+							href="https://gal.saop.cc/p/1089/"
+						/><span
+							hidden
+							itemprop="author"
+							itemscope
+							itemtype="http://schema.org/Person"
+							><meta
+								itemprop="image"
+								content="/img/gaomu.png" /><meta
+								itemprop="name"
+								content="~NNZX~" /></span
+						><span
+							hidden
+							itemprop="publisher"
+							itemscope
+							itemtype="http://schema.org/Organization"
+							><meta itemprop="name" content="NNZX'BLOG" /><meta
+								itemprop="description"
+								content="GO GO GO!" /></span
+						><span
+							hidden
+							itemprop="post"
+							itemscope
+							itemtype="http://schema.org/CreativeWork"
+							><meta itemprop="name" content="FRP内网穿透" /><meta
+								itemprop="description"
+								content=""
+						/></span>
+						<header class="post-header">
+							<h1 class="post-title" itemprop="name headline">
+								FRP内网穿透<span
+									class="exturl post-edit-link"
+									data-url="aHR0cHM6Ly9naXRodWIuY29tL05OWlgwMjQz"
+									title="编辑"
+									><i class="fa fa-pen-nib"></i
+								></span>
+							</h1>
+							<div class="post-meta-container">
+								<div class="post-meta">
+									<span class="post-meta-item"
+										><span class="post-meta-item-icon"
+											><i
+												class="far fa-calendar"
+											></i> </span
+										><span class="post-meta-item-text"
+											>发表于</span
+										>
+										<time
+											title="创建时间：2025-06-28 14:39:33"
+											itemprop="dateCreated datePublished"
+											datetime="2025-06-28T14:39:33+08:00"
+											>2025-06-28</time
+										> </span
+									><span class="post-meta-item"
+										><span class="post-meta-item-icon"
+											><i
+												class="far fa-calendar-check"
+											></i> </span
+										><span class="post-meta-item-text"
+											>更新于</span
+										>
+										<time
+											datetime="2025-06-28T14:39:33+08:00"
+											itemprop="dateModified"
+											title="修改时间：2025-06-28 14:39:33"
+											>2025-06-28</time
+										>
+									</span>
+									<span class="post-meta-item"
+										><span class="post-meta-item-icon"
+											><i
+												class="far fa-folder"
+											></i> </span
+										><span class="post-meta-item-text"
+											>分类于</span
+										>
+										<span
+											itemprop="about"
+											itemscope
+											itemtype="http://schema.org/Thing"
+											><a
+												href="/categories/Other/"
+												itemprop="url"
+												rel="index"
+												><span itemprop="name"
+													>Other</span
+												></a
+											>
+										</span></span
+									>
+								</div>
+							</div>
+						</header>
+						<div class="post-body" itemprop="articleBody">
+							<h1 id="1">1 准备工作</h1>
+							<ul>
+								<li>
+									首先你得有台云服务器部署frp服务，这里就不讲怎么去开云服务器了。站长的云服务器系统使用的是ubuntu
+								</li>
+								<li>
+									去GitHub下载<a
+										href="https://github.com/fatedier/frp/releases"
+										>frp工具<i
+											class="fa fa-external-link-alt"
+										></i>
+									</a>
+								</li>
+								<li>我目前使用的版本是v0.62.1</li>
+								<li>
+									下载frp_0.62.1_linux_amd64.tar.gz（云服务器上作为服务端用）和frp_0.62.1_windows_amd64.zip（windows客户端用）
+								</li>
+								<li>
+									<strong>注意</strong
+									>：下载frp工具杀毒软件和浏览器都会报毒，忽略就行
+								</li>
+							</ul>
+							<h1 id="2">2 官方文档</h1>
+							<ul>
+								<li>
+									<a
+										href="https://gofrp.org/zh-cn/docs/setup/"
+										>frp<i
+											class="fa fa-external-link-alt"
+										></i
+									></a>
+								</li>
+							</ul>
+							<h1 id="3">3 云端部署frp服务</h1>
+							<ul>
+								<li>下面操作提示没权限的话自己 sudo提权</li>
+							</ul>
+							<h3 id="3.1">3.1 建立文件夹</h3>
+							<div class="vscode-view">
+								<div class="vscode-header">
+									<div class="vscode-actions">
+										<span>bash</span>
+									</div>
+								</div>
+								<pre class="vscode-container">
+<span class="code-line"><span class="terminal-yellow">mkdir</span><span class="terminal-blue"> -p </span><span class="terminal-string">/home/frp</span></span>
+<span class="code-line"><span class="terminal-yellow">cd</span><span class="terminal-string"> /home/frp</span></span></pre>
+							</div>
+							<h3 id="3.2">3.2 下载frp</h3>
+							<div class="vscode-view">
+								<div class="vscode-header">
+									<div class="vscode-actions">
+										<span>bash</span>
+									</div>
+								</div>
+								<pre class="vscode-container">
+<span class="code-line"><span class="terminal-yellow">wget</span> <span class="terminal-white">https://github.com/fatedier/frp/releases/download/v0.62.1/frp_0.62.1_linux_amd64.tar.gz</span></span>
+<span class="code-line"><span class="terminal-yellow">tar</span> <span class="terminal-blue">-zxvf</span> <span class="terminal-white">frp_0.62.1_linux_amd64.tar.gz</span></span>
+<span class="code-line"><span class="terminal-yellow">cd</span> <span class="terminal-white">frp_0.62.1_linux_amd64</span></span>
+<span class="code-line"><span class="terminal-yellow">ls</span> <span class="terminal-green">#一般会有下面4个文件 </span></span>
+<span class="code-line"><span class="terminal-yellow">frpc</span> <span class="terminal-green">#客户端程序，这里不必管它</span></span>
+<span class="code-line"><span class="terminal-yellow">frpc.toml</span> <span class="terminal-green">#客户端程序配置文件，这里不必管它</span></span>
+<span class="code-line"><span class="terminal-yellow">frps</span> <span class="terminal-green">#服务端程序，待会启动它</span></span>
+<span class="code-line"><span class="terminal-yellow">frps.toml</span> <span class="terminal-green">#服务端程序配置文件</span></span>
+<span class="code-line"><span class="terminal-yellow">LICENSE</span> <span class="terminal-green"># 不用管</span></span></pre>
+							</div>
+							<h3 id="3.3">3.3 编辑frp服务端配置文件</h3>
+							<div class="vscode-view">
+								<div class="vscode-header">
+									<div class="vscode-actions">
+										<span>bash</span>
+									</div>
+								</div>
+								<pre
+									class="vscode-container"
+								><span class="code-line"><span class="terminal-yellow">vim</span> <span class="terminal-white">frps.toml</span></span></pre>
+							</div>
+
+							<ul>
+								<li>填入下面内容wq退出,</li>
+								<li><strong>注意</strong>：把#号注释删除</li>
+							</ul>
+							<div class="vscode-view">
+								<div class="vscode-header">
+									<div class="vscode-actions">
+										<span>txt</span>
+									</div>
+								</div>
+								<pre class="vscode-container">
+<span class="code-line"><span class="terminal-yellow">bindAddr</span> <span class="terminal-white">=</span> <span class="terminal-string">"</span><span class="terminal-string">0.0.0.0</span><span class="terminal-string">"</span><span class="terminal-green"># 监听地址，这里表示监听本服务器IP地址</span></span>
+<span class="code-line"><span class="terminal-yellow">bindPort</span> <span class="terminal-white">=</span> <span class="terminal-white">7100</span><span class="terminal-green">#frp服务端口</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="terminal-green"># 下面内容是启动一个webServer，通过浏览器输入 服务器IP：7500可以图形化查看frp状态</span></span>
+<span class="code-line"><span class="terminal-yellow">webServer.addr</span> <span class="terminal-white">=</span> <span class="terminal-string">"</span><span class="terminal-string">0.0.0.0</span><span class="terminal-string">"</span><span class="terminal-green"># 监听地址，这里表示监听本服务器IP地址</span></span>
+<span class="code-line"><span class="terminal-yellow">webServer.port</span> <span class="terminal-white">=</span> <span class="terminal-white">7500</span><span class="terminal-green"># webServer服务端口</span></span>
+<span class="code-line"><span class="terminal-yellow">webServer.user</span> <span class="terminal-white">=</span> <span class="terminal-string">"</span><span class="terminal-string">username</span><span class="terminal-string">"</span><span class="terminal-green"># 用户名，用于登录</span></span>
+<span class="code-line"><span class="terminal-yellow">webServer.password</span> <span class="terminal-white">=</span> <span class="terminal-string">"</span><span class="terminal-string">password</span><span class="terminal-string">"</span><span class="terminal-green"># 密码，用于登录</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="terminal-green"># 下面设置frp log</span></span>
+<span class="code-line"><span class="terminal-yellow">log.to</span> <span class="terminal-white">=</span> <span class="terminal-string">"</span><span class="terminal-string">./frps.log</span><span class="terminal-string">"</span><span class="terminal-green"># log文件地址</span></span>
+<span class="code-line"><span class="terminal-yellow">log.level</span> <span class="terminal-white">=</span> <span class="terminal-string">"</span><span class="terminal-string">info</span><span class="terminal-string">"</span></span>
+<span class="code-line"><span class="terminal-yellow">log.maxDays</span> <span class="terminal-white">=</span> <span class="terminal-white">5</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="terminal-yellow">auth.method</span> <span class="terminal-white">=</span> <span class="terminal-string">"</span><span class="terminal-string">token</span><span class="terminal-string">"</span><span class="terminal-green"># 启用token验证 </span></span>
+<span class="code-line"><span class="terminal-yellow">auth.token</span> <span class="terminal-white">=</span> <span class="terminal-string">"</span><span class="terminal-string">21345679</span><span class="terminal-string">"</span><span class="terminal-green"># token， 客户端要配置和这里一样的token才能正常内网穿透</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="terminal-green"># frp服务可以使用的端口范围6000~7000</span></span>
+<span class="code-line"><span class="terminal-yellow">allowPorts</span> <span class="terminal-white">=</span> <span class="terminal-white">[</span></span>
+<span class="code-line">    <span class="terminal-white">{</span> <span class="terminal-white">start</span> <span class="terminal-white">=</span> <span class="terminal-white">6000,</span> <span class="terminal-white">end</span> <span class="terminal-white">=</span> <span class="terminal-white">7000}</span></span>
+<span class="code-line"><span class="terminal-white">]</span></span></pre>
+							</div>
+							<h3 id="3.4">3.4 防火墙配置</h3>
+							<ul>
+								<li>这里不讲，主要配置放行上面端口</li>
+							</ul>
+							<h3 id="3.5">3.5 systemd配置</h3>
+							<ul>
+								<li>
+									在 Linux 系统下，使用
+									<code>systemd</code> 可以方便地控制 frps
+									服务端的启动、停止、配置后台运行以及开机自启动。
+								</li>
+							</ul>
+							<p>以下是具体的操作步骤：</p>
+							<p><strong>3.5.1 安装 systemd</strong></p>
+							<p>
+								如果您的 Linux 服务器上尚未安装
+								systemd，可以使用包管理器如
+								<code>yum</code>（适用于 CentOS/RHEL）或
+								<code>apt</code>（适用于
+								Debian/Ubuntu）来安装它：
+							</p>
+							<div class="vscode-view">
+								<div class="vscode-header">
+									<div class="vscode-actions">
+										<span>bash</span>
+									</div>
+								</div>
+								<pre
+									class="vscode-container"
+								><span class="code-line"><span class="terminal-green"># 使用 yum 安装 systemd（CentOS/RHEL）</span></span>
+<span class="code-line"><span class="terminal-yellow">yum</span> <span class="terminal-white">install</span> <span class="terminal-white">systemd</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="terminal-green"># 使用 apt 安装 systemd（Debian/Ubuntu）</span></span>
+<span class="code-line"><span class="terminal-yellow">apt</span> <span class="terminal-white">install</span> <span class="terminal-white">systemd</span></span></pre>
+							</div>
+							<p><strong>3.5.2 创建 frps.service 文件</strong></p>
+							<p>
+								使用文本编辑器 (如 vim) 在
+								<code>/etc/systemd/system</code> 目录下创建一个
+								<code>frps.service</code> 文件，用于配置 frps
+								服务。
+							</p>
+							<div class="vscode-view">
+								<div class="vscode-header">
+									<div class="vscode-actions">
+										<span>bash</span>
+									</div>
+								</div>
+								<pre
+									class="vscode-container"
+								><span class="code-line"><span class="terminal-yellow">sudo</span> <span class="terminal-yellow">vim</span> <span class="terminal-white">/etc/systemd/system/frps.service</span></span></pre>
+							</div>
+							<p>写入内容</p>
+							<div class="vscode-view">
+								<div class="vscode-header">
+									<div class="vscode-actions">
+										<span>bash</span>
+									</div>
+								</div>
+								<pre
+									class="vscode-container"
+								><span class="code-line"><span class="terminal-yellow">[Unit]</span></span>
+<span class="code-line"><span class="terminal-green"># 服务名称，可自定义</span></span>
+<span class="code-line"><span class="terminal-yellow">Description</span> <span class="terminal-white">=</span> <span class="terminal-white">frp</span> <span class="terminal-white">server</span></span>
+<span class="code-line"><span class="terminal-yellow">After</span> <span class="terminal-white">=</span> <span class="terminal-white">network.target</span> <span class="terminal-white">syslog.target</span></span>
+<span class="code-line"><span class="terminal-yellow">Wants</span> <span class="terminal-white">=</span> <span class="terminal-white">network.target</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="terminal-yellow">[Service]</span></span>
+<span class="code-line"><span class="terminal-yellow">Type</span> <span class="terminal-white">=</span> <span class="terminal-white">simple</span></span>
+<span class="code-line"><span class="terminal-green"># 启动frps的命令，需修改为您的frps的安装路径</span></span>
+<span class="code-line"><span class="terminal-yellow">ExecStart</span> <span class="terminal-white">=</span> <span class="terminal-white">/path/to/frps</span> <span class="terminal-blue">-c</span> <span class="terminal-white">/path/to/frps.toml</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="terminal-yellow">[Install]</span></span>
+<span class="code-line"><span class="terminal-yellow">WantedBy</span> <span class="terminal-white">=</span> <span class="terminal-white">multi-user.target</span></span>
+</pre>
+							</div>
+							<p>
+								<strong
+									>3.5.3 使用 systemd 命令管理 frps
+									服务</strong
+								>
+							</p>
+							<div class="vscode-view">
+								<div class="vscode-header">
+									<div class="vscode-actions">
+										<span>bash</span>
+									</div>
+								</div>
+								<pre
+									class="vscode-container"
+								><span class="code-line"><span class="terminal-green"># 启动frp</span></span>
+<span class="code-line"><span class="terminal-yellow">sudo</span> <span class="terminal-yellow">systemctl</span> <span class="terminal-white">start</span> <span class="terminal-white">frps</span></span>
+<span class="code-line"><span class="terminal-green"># 停止frp</span></span>
+<span class="code-line"><span class="terminal-yellow">sudo</span> <span class="terminal-yellow">systemctl</span> <span class="terminal-white">stop</span> <span class="terminal-white">frps</span></span>
+<span class="code-line"><span class="terminal-green"># 重启frp</span></span>
+<span class="code-line"><span class="terminal-yellow">sudo</span> <span class="terminal-yellow">systemctl</span> <span class="terminal-white">restart</span> <span class="terminal-white">frps</span></span>
+<span class="code-line"><span class="terminal-green"># 查看frp状态</span></span>
+<span class="code-line"><span class="terminal-yellow">sudo</span> <span class="terminal-yellow">systemctl</span> <span class="terminal-white">status</span> <span class="terminal-white">frps</span></span></pre>
+							</div>
+							<p><strong>3.5.4 设置 frps 开机自启动</strong></p>
+							<div class="vscode-view">
+								<div class="vscode-header">
+									<div class="vscode-actions">
+										<span>bash</span>
+									</div>
+								</div>
+								<pre
+									class="vscode-container"
+								><span class="code-line"><span class="terminal-yellow">sudo</span> <span class="terminal-yellow">systemctl</span> <span class="terminal-white">enable</span> <span class="terminal-white">frps</span></span></pre>
+							</div>
+							<h3 id="3.6">3.6 启动frps服务</h3>
+							<div class="vscode-view">
+								<div class="vscode-header">
+									<div class="vscode-actions">
+										<span>bash</span>
+									</div>
+								</div>
+								<pre
+									class="vscode-container"
+								><span class="code-line"><span class="terminal-yellow">./frps</span> <span class="terminal-blue">-c</span> <span class="terminal-white">./frps.toml</span> <span class="terminal-white">&</span><span class="terminal-green"># & 表示后台运行</span></span></pre>
+							</div>
+							<h1 id="4">4、 云端frps脱离终端运行</h1>
+							<ul>
+								<li>
+									实际运行发现在终端上直接执行<code
+										>./frps -c ./frps.toml</code
+									>，终端关闭也会导致frps进程退出
+								</li>
+							</ul>
+							<h3 id="4.1">4.1 安装screen</h3>
+							<div class="vscode-view">
+								<div class="vscode-header">
+									<div class="vscode-actions">
+										<span>bash</span>
+									</div>
+								</div>
+								<pre
+									class="vscode-container"
+								><span class="code-line"><span class="terminal-yellow">sudo</span> <span class="terminal-yellow">apt-get</span> <span class="terminal-white">install</span> <span class="terminal-white">screen</span></span></pre>
+							</div>
+							<h3 id="4.2">4.2 创建screen会话</h3>
+							<div class="vscode-view">
+								<div class="vscode-header">
+									<div class="vscode-actions">
+										<span>bash</span>
+									</div>
+								</div>
+								<pre
+									class="vscode-container"
+								><span class="code-line"><span class="terminal-yellow">screen</span> <span class="terminal-blue">-S</span> <span class="terminal-white">frpsscreen</span></span></pre>
+							</div>
+							<h3 id="4.3">4.3 在screen会话中运行frps服务</h3>
+							<div class="vscode-view">
+								<div class="vscode-header">
+									<div class="vscode-actions">
+										<span>bash</span>
+									</div>
+								</div>
+								<pre
+									class="vscode-container"
+								><span class="code-line"><span class="terminal-yellow">./frps</span> <span class="terminal-blue">-c</span> <span class="terminal-white">./frps.toml</span> <span class="terminal-white">&</span></span></pre>
+							</div>
+							<h3 id="4.4">4.4 剥离screen会话</h3>
+							<ul>
+								<li>
+									<p>
+										<strong
+											>Ctrl+A+D (同时按键盘上的 Ctrl、A、D
+											三个键)</strong
+										>
+									</p>
+								</li>
+								<li>
+									<p>
+										说明：此时可以关闭终端，让程序在服务器上继续运行了
+									</p>
+								</li>
+							</ul>
+							<h3 id="4.5">4.5 重新接入screen会话</h3>
+							<ul>
+								<li>查看当前存在的screen会话</li>
+							</ul>
+							<div class="vscode-view">
+								<div class="vscode-header">
+									<div class="vscode-actions">
+										<span>bash</span>
+									</div>
+								</div>
+								<pre
+									class="vscode-container"
+								><span class="code-line"><span class="terminal-yellow">screen</span> <span class="terminal-blue">-ls</span></span></pre>
+							</div>
+							<h3 id="4.6">4.6 接入会话</h3>
+							<div class="vscode-view">
+								<div class="vscode-header">
+									<div class="vscode-actions">
+										<span>bash</span>
+									</div>
+								</div>
+								<pre
+									class="vscode-container"
+								><span class="code-line"><span class="terminal-yellow">screen</span> <span class="terminal-blue">-x</span> <span class="terminal-white">进程号</span></span></pre>
+							</div>
+							<ul>
+								<li>或者</li>
+							</ul>
+							<div class="vscode-view">
+								<div class="vscode-header">
+									<div class="vscode-actions">
+										<span>bash</span>
+									</div>
+								</div>
+								<pre
+									class="vscode-container"
+								><span class="code-line"><span class="terminal-yellow">screen</span> <span class="terminal-blue">-r</span> <span class="terminal-white">frpsscreen</span></span></pre>
+							</div>
+							<h3 id="4.7">4.7 关闭所有screen会话</h3>
+							<ul>
+								<li>查看有多少个screen</li>
+							</ul>
+							<div class="vscode-view">
+								<div class="vscode-header">
+									<div class="vscode-actions">
+										<span>bash</span>
+									</div>
+								</div>
+								<pre
+									class="vscode-container"
+								><span class="code-line"><span class="terminal-yellow">screen</span> <span class="terminal-blue">-ls</span> <span class="terminal-white">|awk</span> <span class="terminal-string">'</span><span class="terminal-string">/Socket/</span><span class="terminal-string">'</span><span class="terminal-white">|awk</span> <span class="terminal-string">'</span><span class="terminal-string">{print $1}</span><span class="terminal-string">'</span></span></pre>
+							</div>
+							<ul>
+								<li>
+									如果有20个screen，关闭所有screen的命令为
+								</li>
+							</ul>
+							<div class="vscode-view">
+								<div class="vscode-header">
+									<div class="vscode-actions">
+										<span>bash</span>
+									</div>
+								</div>
+								<pre
+									class="vscode-container"
+								><span class="code-line"><span class="terminal-yellow">screen</span> <span class="terminal-blue">-ls|awk</span> <span class="terminal-string">'</span><span class="terminal-string">NR>=2&&NR<=20{print $1}</span><span class="terminal-string">'</span><span class="terminal-white">|awk</span> <span class="terminal-string">'</span><span class="terminal-string">{print "screen -S "$1" -X quit"}</span><span class="terminal-string">'</span><span class="terminal-white">|sh</span></span></pre>
+							</div>
+							<h1 id="5">5、本地客户端内网穿透</h1>
+							<h3 id="5.1">5.1 建立文件夹</h3>
+							<ul>
+								<li>
+									随便找个文件夹放frp_0.62.1_windows_amd64.zip，解压
+								</li>
+								<li>一般会解压出5个文件</li>
+							</ul>
+							<div class="vscode-view">
+								<div class="vscode-header">
+									<div class="vscode-actions">
+										<span>bash</span>
+									</div>
+								</div>
+								<pre
+									class="vscode-container"
+								><span class="code-line"><span class="terminal-yellow">frpc</span><span class="terminal-green"> #客户端程序</span></span>
+<span class="code-line"><span class="terminal-yellow">frpc.toml</span><span class="terminal-green"> #客户端程序配置文件</span></span>
+<span class="code-line"><span class="terminal-yellow">frps</span><span class="terminal-green"> #服务端程序，这里不必管它</span></span>
+<span class="code-line"><span class="terminal-yellow">frps.toml</span><span class="terminal-green"> #服务端程序配置文件，这里不必管它</span></span>
+<span class="code-line"><span class="terminal-yellow">LICENSE</span><span class="terminal-green"> #不用管</span></span></pre>
+							</div>
+							<h3 id="5.2">5.2 编辑frp客户端配置文件</h3>
+							<ul>
+								<li>使用任意编辑器打开frpc.toml编辑</li>
+								<li><strong>注意</strong>：把#号注释删除</li>
+							</ul>
+							<div class="vscode-view">
+								<div class="vscode-header">
+									<div class="vscode-actions">
+										<span>txt</span>
+									</div>
+								</div>
+								<pre
+									class="vscode-container"
+								><span class="code-line"><span class="terminal-yellow">serverAddr</span> <span class="terminal-white">=</span> <span class="terminal-string">"</span><span class="terminal-string">192.168.1.1</span><span class="terminal-string">"</span><span class="terminal-green"># frp服务器公网IP</span></span>
+<span class="code-line"><span class="terminal-yellow">serverPort</span> <span class="terminal-white">=</span> <span class="terminal-white">7100</span><span class="terminal-green"># frp服务器监听的端口</span></span>
+<span class="code-line"><span class="terminal-yellow">loginFailExit</span> <span class="terminal-white">=</span> <span class="terminal-white">true</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="terminal-green"># 日志文件配置</span></span>
+<span class="code-line"><span class="terminal-yellow">log.to</span> <span class="terminal-white">=</span> <span class="terminal-string">"</span><span class="terminal-string">./frpc.log</span><span class="terminal-string">"</span></span>
+<span class="code-line"><span class="terminal-yellow">log.level</span> <span class="terminal-white">=</span> <span class="terminal-string">"</span><span class="terminal-string">info</span><span class="terminal-string">"</span></span>
+<span class="code-line"><span class="terminal-yellow">log.maxDays</span> <span class="terminal-white">=</span> <span class="terminal-white">5</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="terminal-yellow">auth.method</span> <span class="terminal-white">=</span> <span class="terminal-string">"</span><span class="terminal-string">token</span><span class="terminal-string">"</span><span class="terminal-green"># token验证</span></span>
+<span class="code-line"><span class="terminal-yellow">auth.token</span> <span class="terminal-white">=</span> <span class="terminal-string">"</span><span class="terminal-string">21345679</span><span class="terminal-string">"</span><span class="terminal-green"># token， 客户端这里要和服务端一致</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="terminal-yellow">[[proxies]]</span></span>
+<span class="code-line"><span class="terminal-yellow">name</span> <span class="terminal-white">=</span> <span class="terminal-string">"</span><span class="terminal-string">NNZX BLOG</span><span class="terminal-string">"</span><span class="terminal-green"># 代理名称，随便取</span></span>
+<span class="code-line"><span class="terminal-yellow">type</span> <span class="terminal-white">=</span> <span class="terminal-string">"</span><span class="terminal-string">tcp</span><span class="terminal-string">"</span><span class="terminal-green"># 协议类型</span></span>
+<span class="code-line"><span class="terminal-yellow">localIP</span> <span class="terminal-white">=</span> <span class="terminal-string">"</span><span class="terminal-string">127.0.0.1</span><span class="terminal-string">"</span><span class="terminal-green"># 本机IP地址</span></span>
+<span class="code-line"><span class="terminal-yellow">localPort</span> <span class="terminal-white">=</span> <span class="terminal-white">5500</span><span class="terminal-green"># 本机需要内网穿透的端口</span></span>
+<span class="code-line"><span class="terminal-yellow">remotePort</span> <span class="terminal-white">=</span> <span class="terminal-white">6100</span><span class="terminal-green"># frp服务器暴露在公网上的端口，通过访问154.64.231.134：6100 可以访问到本机5500端口</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="terminal-yellow">[[proxies]]</span></span>
+<span class="code-line"><span class="terminal-yellow">name</span> <span class="terminal-white">=</span> <span class="terminal-string">"</span><span class="terminal-string">Minecraft</span><span class="terminal-string">"</span></span>
+<span class="code-line"><span class="terminal-yellow">type</span> <span class="terminal-white">=</span> <span class="terminal-string">"</span><span class="terminal-string">tcp</span><span class="terminal-string">"</span></span>
+<span class="code-line"><span class="terminal-yellow">localIP</span> <span class="terminal-white">=</span> <span class="terminal-string">"</span><span class="terminal-string">127.0.0.1</span><span class="terminal-string">"</span></span>
+<span class="code-line"><span class="terminal-yellow">localPort</span> <span class="terminal-white">=</span> <span class="terminal-white">25565</span></span>
+<span class="code-line"><span class="terminal-yellow">remotePort</span> <span class="terminal-white">=</span> <span class="terminal-white">6255</span></span>
+</pre>
+							</div>
+							<h3 id="5.3">5.3 启动内网穿透</h3>
+							<ul>
+								<li>使用终端运行frpc.exe</li>
+							</ul>
+							<div class="vscode-view">
+								<div class="vscode-header">
+									<div class="vscode-actions">
+										<span>bash</span>
+									</div>
+								</div>
+								<pre
+									class="vscode-container"
+								><span class="code-line"><span class="terminal-yellow">./frpc</span> <span class="terminal-blue">-c</span> <span class="terminal-white">./frpc.toml</span></span></pre>
+							</div>
+						</div>
+						<footer class="post-footer">
+							<div class="reward-container">
+								<div>请我一杯咖啡吧！</div>
+								<button>赞赏</button>
+								<div class="post-reward">
+									<p style="text-align: center">
+										站长现在一杯咖啡还是买得起的，谢谢你的好意！
+									</p>
+									<!-- <div>
+										<img
+											src="/img/wechatpay.webp"
+											alt="Asuna 微信"
+										/>
+										<span>微信</span>
+									</div>
+									<div>
+										<img
+											src="/img/alipay.webp"
+											alt="Asuna 支付宝"
+										/>
+										<span>支付宝</span>
+									</div> -->
+								</div>
+							</div>
+							<div class="post-copyright">
+								<ul>
+									<li class="post-copyright-author">
+										<strong>本文作者： </strong>~NNZX~
+									</li>
+									<li class="post-copyright-source">
+										<strong>文章来源： </strong>~NNZX~编写
+									</li>
+									<li class="post-copyright-link">
+										<strong>本文链接：</strong>
+										<a href="/p/2/" title="FRP内网穿透"
+											>https://nnzxblog.cn/p/2/</a
+										>
+									</li>
+									<li class="post-copyright-license">
+										<strong>版权声明： </strong
+										>本博客所有文章除特别声明外，均可随便转载，因为文章也不知道站长从哪薅来的！当然站长记得的话也会标明出处。
+									</li>
+								</ul>
+							</div>
+							<div class="post-nav">
+								<div class="post-nav-item">
+									<a
+										href="/p/1/"
+										rel="prev"
+										title="堆排序与拓扑排序"
+										><i class="fa fa-angle-left"></i>
+										堆排序与拓扑排序</a
+									>
+								</div>
+								<div class="post-nav-item">
+									<a
+										href="/p/2/"
+										rel="next"
+										title="已经到底咯"
+										>已经到底咯
+										<i class="fa fa-angle-right"></i
+									></a>
+								</div>
+							</div>
+						</footer>
+					</article>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer-inner">
+				<div class="copyright">
+					© 2024 – <span itemprop="copyrightYear">2025</span>
+					<span class="with-love"><i class="fa fa-heart"></i> </span
+					><span class="author" itemprop="copyrightHolder"
+						>~NNZX~</span
+					>
+				</div>
+				<script
+					async
+					src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"
+				></script>
+				<div class="busuanzi-count">
+					<span class="post-meta-item" id="busuanzi_container_site_uv"
+						><span class="post-meta-item-icon"
+							><i class="fa fa-user"></i> </span
+						><span class="site-uv" title="总访客量"
+							><span
+								id="busuanzi_value_site_uv"
+							></span> </span></span
+					><span
+						class="post-meta-item"
+						id="busuanzi_container_site_pv"
+						><span class="post-meta-item-icon"
+							><i class="fa fa-eye"></i> </span
+						><span class="site-pv" title="总访问量"
+							><span id="busuanzi_value_site_pv"></span></span
+					></span>
+				</div>
+				<script>
+					if (
+						null == window.localStorage.getItem('fpson') ||
+						'1' == window.localStorage.getItem('fpson')
+					) {
+						var rAF =
+								window.requestAnimationFrame ||
+								window.webkitRequestAnimationFrame ||
+								function (e) {
+									window.setTimeout(e, 1e3 / 60)
+								},
+							frame = 0,
+							allFrameCount = 0,
+							lastTime = Date.now(),
+							lastFameTime = Date.now(),
+							loop = function () {
+								var e = Date.now(),
+									t = e - lastFameTime,
+									n = Math.round(1e3 / t)
+								if (
+									((lastFameTime = e),
+									allFrameCount++,
+									frame++,
+									e > 1e3 + lastTime)
+								) {
+									if (
+										(n = Math.round(
+											(1e3 * frame) / (e - lastTime)
+										)) <= 5
+									)
+										var o =
+											'<span style="color:#bd0000">卡成ppt🤢</span>'
+									else if (n <= 15)
+										o =
+											'<span style="color:red">电竞级帧率😖</span>'
+									else if (n <= 25)
+										o =
+											'<span style="color:orange">有点难受😨</span>'
+									else if (n < 35)
+										o =
+											'<span style="color:#9338e6">不太流畅🙄</span>'
+									else if (n <= 45)
+										o =
+											'<span style="color:#08b7e4">还不错哦😁</span>'
+									else
+										o =
+											'<span style="color:#39c5bb">十分流畅🤣</span>'
+									;(document.getElementById(
+										'fps'
+									).innerHTML = `FPS:${n} ${o}`),
+										(frame = 0),
+										(lastTime = e)
+								}
+								rAF(loop)
+							}
+						loop()
+					} else
+						document.getElementById('fps').style =
+							'display:none!important'
+					const observer = new MutationObserver(function (e) {
+						const t = document.querySelector('.aplayer-icon-lrc')
+						t &&
+							(setTimeout(function () {
+								t.click()
+							}, 1),
+							observer.disconnect())
+					})
+					observer.observe(document, { childList: !0, subtree: !0 })
+					function initializeRuntimeCounter() {
+						const e = new Date('2024/01/27 21:52:00')
+						function t() {
+							const t = new Date()
+							t.setTime(t.getTime() + 250)
+							const n = (t - e) / 1e3 / 60 / 60 / 24,
+								o = Math.floor(n),
+								r = (t - e) / 1e3 / 60 / 60 - 24 * o,
+								i = Math.floor(r).toString().padStart(2, '0'),
+								a = (t - e) / 1e3 / 60 - 1440 * o - 60 * i,
+								s = Math.floor(a).toString().padStart(2, '0'),
+								l =
+									(t - e) / 1e3 -
+									86400 * o -
+									3600 * i -
+									60 * s,
+								c = Math.round(l).toString().padStart(2, '0')
+							;(document.getElementById('timeDate').innerHTML =
+								'距今已艰难运行了&nbsp' + o + '&nbsp天&nbsp'),
+								(document.getElementById('times').innerHTML =
+									i +
+									'&nbsp小时&nbsp' +
+									s +
+									'&nbsp分&nbsp' +
+									c +
+									'&nbsp秒')
+						}
+						t(), setInterval(t, 1e3)
+					}
+					document.addEventListener(
+						'DOMContentLoaded',
+						initializeRuntimeCounter
+					),
+						document.addEventListener(
+							'pjax:complete',
+							initializeRuntimeCounter
+						)
+					const copyrightAuthor = document
+						.querySelector('.copyright')
+						.querySelector('.author')
+					copyrightAuthor.addEventListener('click', (e) => {
+						window.open('https://ciallo.cc/')
+					}),
+						copyrightAuthor.addEventListener('mouseover', (e) => {
+							;(copyrightAuthor.style.textDecoration =
+								'underline'),
+								(copyrightAuthor.style.cursor = 'pointer')
+						}),
+						copyrightAuthor.addEventListener('mouseout', (e) => {
+							copyrightAuthor.style.textDecoration = 'none'
+						})
+				</script>
+				<span id="fps"></span
+				><link
+					href="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.css"
+					rel="stylesheet"
+				/><meting-js
+					autoplay=""
+					fixed="true"
+					id="8464409595"
+					list-folded="false"
+					list-max-height="36vh"
+					order="random"
+					server="netease"
+					type="playlist"
+					volume="0.3"
+				></meting-js>
+				<script
+					async=""
+					src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.js"
+				></script>
+				<script
+					async=""
+					src="https://registry.npmmirror.com/meting/latest/files/dist/Meting.min.js"
+				></script>
+			</div>
+		</footer>
+		<div class="toggle sidebar-toggle" role="button">
+			<span class="toggle-line"></span> <span class="toggle-line"></span>
+			<span class="toggle-line"></span>
+		</div>
+		<div class="sidebar-dimmer"></div>
+		<noscript
+			><div class="noscript-warning">
+				Theme NexT works best with JavaScript enabled
+			</div></noscript
+		>
+	</body>
+</html>
+>>>>>>> 6aa4ddd9de4780337b325b9aaeb6c4a29e51f047

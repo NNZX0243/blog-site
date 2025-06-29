@@ -1,6 +1,6 @@
 window.GLOBAL_VARS = {
 	categories: 13,
-	archives: 1,
+	archives: 2,
 	siteName: "NNZX'S BLOG",
 	author: '~NNZX~',
 }

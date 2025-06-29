@@ -1,0 +1,1 @@
+<span class="code-line"><span class="terminal-yellow">./frpc</span> <span class="terminal-blue">-c</span> <span class="terminal-white">./frpc.toml</span></span>
